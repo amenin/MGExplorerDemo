@@ -64,6 +64,14 @@ define([], function () {
 
 		//-------------------------
 		function _addSelectLegend(idDivPanel) {
+			$(idDivPanel).append($("<button>").append("X").addClass("exitButton").on("click", (d) => {
+				const parent = $(d.target.offsetParent);
+
+				if (parent.css("display") === "none")
+					parent.css({ "display": "block" });
+				else
+					parent.css({ "display": "none" });
+			}));
 			_selectLegend = $("<select>", { class: "MG-selLegend" });
 			$(idDivPanel).append($("<br/>")).append($("<label>").append("&nbsp;Node:")).append(_selectLegend);
 			_addItemsSelectLegend();

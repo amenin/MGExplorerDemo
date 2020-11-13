@@ -34,9 +34,17 @@ define([], function () {
 		//-------------------------
 		function _addStatistics(idDivPanel) {
 
+			$(idDivPanel).append($("<br>")).append($("<button>").append("&times;").addClass("exitButton").on("click", (d) => {
+				const parent = $(d.target.offsetParent);
+
+				if (parent.css("display") === "none")
+					parent.css({ "display": "block" });
+				else
+					parent.css({ "display": "none" });
+			}));
 			_spanNodes = $("<span>");
 			_spanEdges = $("<span>");
-			$(idDivPanel).append($("<br>"))
+			$(idDivPanel)
 				.append($("<label>").append("&nbsp;Nodes:&nbsp;").append(_spanNodes));
 			$(idDivPanel).append($("<br>"))
 				.append($("<label>").append("&nbsp;Edges:&nbsp;").append(_spanEdges));
@@ -127,9 +135,15 @@ define([], function () {
 		function _addAutocomplete(idDivPanel) {
 			_searchAutocomplete = $("<input>", { class: "NE-Autocomplete" }).attr("placeholder", "Search")
 
+			_searchAutocomplete.on("input", (d) => {
+				if (d.target.value === "") {
+					_nodeEdgeChart.resetHighSearch();
+				}
+			});
 			$(idDivPanel).append($("<br>")).append($("<br>"))
 				.append(_searchAutocomplete);
 		}
+
 		//-----------------------------------	  
 
 		function panel() { }
@@ -138,6 +152,7 @@ define([], function () {
 		panel.create = function (idPanel) {
 
 			_idPanel = idPanel;
+			
 			var divPanel = $("<div/>", {
 				class: "NE-panel"
 			}).css({ "width": _width });

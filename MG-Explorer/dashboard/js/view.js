@@ -11,8 +11,10 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
             _divView = null,            // Div that represents the view included
             _objChart = null,            // Chart associated with view
             _objPanel = null,           // Panel associated with the chart and the view
+            _objLegend = null,          // Legend associated to the chart
             _idChart = (idView + "-c"), // div id where <svg> will be included
             _idPanel = (idView + "-p"), // id of <div> where the control panel of the technique will be inserted
+            _idLegend = (idView + '-l'), // id of the div element containing the legend
             _config = null,
             _position = { x: 0, y: 0 },
             _center = { cx: 0, cy: 0 },
@@ -37,12 +39,13 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
 
         //---------------------		
         view.create = function (x, y, config) {
-            let viewDiv, barDiv, chartDiv, panelDiv, idBar, stDisplay, thisView = this;
+            let viewDiv, barDiv, chartDiv, panelDiv, idBar, stDisplay, legendDiv, thisView = this;
             let selLinkPai, selLinkFilhos, selConect;
-
+            
             _config = {
                 barTitle: config.barTitle, btTool: config.btTool, btClose: config.btClose, draggable: config.draggable,
-                resizable: config.resizable, aspectRatio: config.aspectRatio, visible: config.visible
+                resizable: config.resizable, aspectRatio: config.aspectRatio, visible: config.visible,
+                btLegend: config.btLegend
             };
             if (!_config.barTitle) {
                 _barTitleHeight = 0;
@@ -83,7 +86,7 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
 
                 _svgBarTitle = d3.select(idBar).append("svg");		// I removed from inside if
                 if (_config.btTool) {
-
+                    
                     _svgBarTitle.append("rect")   // Botao tools
                         .attr("x", _marginButton)
                         .attr("y", _marginButton)
@@ -98,6 +101,7 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
                         })
                         .append("title")
                         .text("Tools");
+
                     _svgBarTitle.append("line")
                         .attr("x1", 5).attr("y1", 5)
                         .attr("x2", 11).attr("y2", 5).style({ "stroke": "black" });
@@ -105,11 +109,38 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
                         .attr("x1", 8).attr("y1", 5)
                         .attr("x2", 8).attr("y2", 11).style({ "stroke": "black" });
                 }
+
+                if (_config.btLegend){
+                    
+                    _svgBarTitle.append("rect")   // Legend button
+                        .attr("x", _marginButton + 15)
+                        .attr("y", _marginButton)
+                        .attr("width", _barTitleHeight - 2 * _marginButton)
+                        .attr("height", _barTitleHeight - 2 * _marginButton)
+                        .on("click", function () {
+                            let panel = $("#" + _idLegend);
+                            if (panel.css("display") === "none")
+                                panel.css({ "display": "block" });
+                            else
+                                panel.css({ "display": "none" });
+                        })
+                        .append("title")
+                        .text("Legend");
+
+                    _svgBarTitle.append("line")
+                        .attr("x1", 22).attr("y1", 4)
+                        .attr("x2", 22).attr("y2", 11).style({ "stroke": "black" });
+                    
+                    _svgBarTitle.append("line")
+                        .attr("x1", 22).attr("y1", 10)
+                        .attr("x2", 26).attr("y2", 10).style({ "stroke": "black" });
+                }
+
                 //--------------- Adds an empty title that will be changed by setTitle
                 if (_config.btTool) {
                     _svgBarTitle.append("text").text("")
                         .attr("class", "view-bar-titulo")
-                        .attr("x", 20).attr("y", 11);
+                        .attr("x", 35).attr("y", 11);
 
                 } else {
                     _svgBarTitle.append("text").text("")
@@ -141,6 +172,14 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
                     class: "view-panel"
                 }).css({ "position": "absolute", "top": _yPanel, "display": "none" }).draggable();
                 $(idView).append(panelDiv);
+
+                legendDiv = $("<div/>", {
+                    id: _idLegend,
+                    class: "view-panel"
+                }).css({ "position": "absolute", "top": _yPanel, "display": "none" }).draggable();
+                $(idView).append(legendDiv);
+
+
 
                 if (_config.draggable) {     //----------- Make the view draggable
                     _divView.draggable({
@@ -302,7 +341,7 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
         };
 
         //---------------------
-        view.conectChart = function (objChart, ConstPanel) {
+        view.conectChart = function (objChart, ConstPanel, ConstLegend) {
             let box = objChart.box();
             _dimView.width = box.width;
             _dimChart.width = box.width;
@@ -322,6 +361,13 @@ define(["jquery", "jqueryui", "d3"], function ($, JQueryUI, d3) {
                 //	     _objChart.createToolPanel(_idPanel);
                 _objChart.panel(_objPanel);
 
+            }
+
+            if (_config.btLegend) {
+                _refreshBarTitle();
+                _objLegend = ConstLegend(_objChart);
+                _objLegend.create(_idLegend);
+                _objChart.legend(_objLegend);
             }
             _center.cx = _position.x + _dimView.width / 2;
             _center.cy = _position.y + _dimView.height / 2;

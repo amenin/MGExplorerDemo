@@ -5,7 +5,7 @@
 
 define([], function () {
 
-    return function PapersListPanel (papersListChart) {
+    return function PapersListPanel(papersListChart) {
         let _papersChart = papersListChart,
             _width = 220,
             _height = 80,
@@ -24,10 +24,10 @@ define([], function () {
 
             _selectOrder[0].selectedIndex = 0;
 
-            _selectOrder.change( function(){
+            _selectOrder.change(function () {
                 let valor = +this.value;
 
-                if (valor===0)
+                if (valor === 0)
                     _papersChart.sortByText();
                 else
                     _papersChart.sortByYear();
@@ -35,31 +35,40 @@ define([], function () {
 
         }
 
-        function _addSelectOrder( idDivPanel) {
-            _selectOrder = $("<select>", { class: "IC-selOrderBy"});
-            $(idDivPanel).append( $("<br/>") ).append( $("<label>").append("&nbsp;Order by:")).append(_selectOrder);
+        function _addSelectOrder(idDivPanel) {
+            $(idDivPanel).append($("<br>")).append($("<button>").append("X").addClass("exitButton").on("click", (d) => {
+                const parent = $(d.target.offsetParent);
+
+                if (parent.css("display") === "none")
+                    parent.css({ "display": "block" });
+                else
+                    parent.css({ "display": "none" });
+            }));
+
+            _selectOrder = $("<select>", { class: "IC-selOrderBy" });
+            $(idDivPanel).append($("<br/>")).append($("<label>").append("&nbsp;Order by:")).append(_selectOrder);
             _addItemsSelectOrder();
         }
 
         //-----------------------------------
 
-        function panel() {}
+        function panel() { }
 
-        panel.create = function( idPanel) {
+        panel.create = function (idPanel) {
             _idPanel = idPanel;
-            let divPanel = $("<div/>",{
-                class:"PL-panel"
-            }).css({"width":_width, "height": _height});
-            $("#"+_idPanel).append(divPanel);
+            let divPanel = $("<div/>", {
+                class: "PL-panel"
+            }).css({ "width": _width, "height": _height });
+            $("#" + _idPanel).append(divPanel);
 
             //------------- Select for sort order
-            _addSelectOrder("#"+ _idPanel + " .PL-panel");
+            _addSelectOrder("#" + _idPanel + " .PL-panel");
 
             return panel;
         };
 
         //---------------------
-        panel.update = function() {
+        panel.update = function () {
         };
 
         //---------------------

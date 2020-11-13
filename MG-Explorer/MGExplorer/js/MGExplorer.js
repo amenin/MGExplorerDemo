@@ -1,15 +1,24 @@
-function launch(haldata, datatype, name1, name2) {
+//let ejs = require('ejs');
+// define(function (require) {
+//     let ejs = require('ejs');
+//     //ejs = require ('ejs');
+
+// });
+
+function launch(haldata, datatype, name1, name2, stylesheet, followupQuery) {
     require(["dashboard", "databaseLib", "libCava", "algCluster", "numericGlyph",
-        "nodeEdgeChart", "nodeEdgePanel", "clusterVisChart", "clusterVisPanel",
+        "nodeEdgeChart", "nodeEdgePanel", 'nodeEdgeLegend', "clusterVisChart", "clusterVisPanel",
         "irisChart", "irisPanel", "matrixGlyphChart", "matrixGlyphPanel", "historyTreeChart", "historyTreePanel",
         "papersListChart", "papersListPanel", "histogramChart", "histogramPanel"],
 
+
         function (Dashboard, DatabaseLib, LibCava, AlgCluster, NumericGlyph,
-            NodeEdgeChart, NodeEdgePanel, ClusterVisChart, ClusterVisPanel,
+            NodeEdgeChart, NodeEdgePanel, NodeEdgeLegend, ClusterVisChart, ClusterVisPanel,
             IrisChart, IrisPanel, MatrixGlyphChart, MatrixGlyphPanel, HistoryTreeChart, HistoryTreePanel,
             PapersListChart, PapersListPanel, HistogramChart, HistogramPanel) {
 
-            let ATN_ShortName = 0,   // ATN: Node attribute
+
+            var ATN_ShortName = 0,   // ATN: Node attribute
                 ATN_AuthorName = 1,
                 ATN_Category = 2,
                 ATN_LinhaPesq = 3,
@@ -44,18 +53,24 @@ function launch(haldata, datatype, name1, name2) {
                 MG_WidthChart = 350,
                 MG_HeightChart = 350;
 
-            let GLYPH_STAR = 4;
-            let _IdChartRoot = 0;  // Id of the root chart of the holding. In this NodeEdge application
-            let _vAttrSelecionaveis = [ATN_Category, ATN_LinhaPesq, ATN_QtLinhaPesq,
+            var GLYPH_STAR = 4;
+            var _IdChartRoot = 0;  // Id of the root chart of the holding. In this NodeEdge application
+            var _vAttrSelecionaveis = [ATN_Category, ATN_LinhaPesq, ATN_QtLinhaPesq,
                 ATN_QtPublicacoes, ATN_QtJournals, ATN_QtBooks, ATN_QtProceedings, ATN_Degree];  // CLUSTERVIS
-            let _vAttrEdgesSelecionaveis = [ATE_QtPublicacoes, ATE_QtJournals, ATE_QtBooks, ATE_QtProceedings];	// IRIS
+            var _vAttrEdgesSelecionaveis = [ATE_QtPublicacoes, ATE_QtJournals, ATE_QtBooks, ATE_QtProceedings];	// IRIS
 
-            let _vAttrSizeSelecionaveis = [ATN_Degree, ATN_QtPublicacoes, ATN_QtJournals, ATN_QtBooks, ATN_QtProceedings];
-            let _selectSizeAttrExiste = false;
-            let _headerTitle = " co-authors "
+            var _vAttrSizeSelecionaveis = [ATN_Degree, ATN_QtPublicacoes, ATN_QtJournals, ATN_QtBooks, ATN_QtProceedings];
+            var _selectSizeAttrExiste = false;
+            var headerParameter = " ";
+            var _headerTitle = " connections ";
+            var _stylesheet = stylesheet;
+            var _canNodeRedirectCorese = false;
+            if (_stylesheet) {
+                _canNodeRedirectCorese = stylesheet.browser != undefined ? true : false;
+            }
             //--------------- Manager Variables
 
-            let _dashboard = null,     	// Represents the entire viewing area
+            var _dashboard = null,     	// Represents the entire viewing area
                 _data = null,           // Stores the data displayed in nodeEdge
 
                 _chart = {   // Structure with the view and chart to be instantiated and stored in the manager
@@ -92,62 +107,90 @@ function launch(haldata, datatype, name1, name2) {
             //    _showChartRoot(_IdChartRoot,false);
             //});
 
-
             // ---------------- Initialization Actions
+            if (!followupQuery) {
+                _dashboard = Dashboard("viewArea");
 
-            _dashboard = Dashboard("viewArea");
+                //_selectedQuery = parseInt($("#selectQuery")[0].selectedIndex);
+                //_selectedCluster = parseInt($("#selectCluster")[0].selectedIndex);
 
-            //_selectedQuery = parseInt($("#selectQuery")[0].selectedIndex);
-            //_selectedCluster = parseInt($("#selectCluster")[0].selectedIndex);
+                _inicContextMenu();
 
-            _inicContextMenu();
+                if (typeof (launch.counter) == 'undefined') {
+                    launch.counter = -1;
+                }
+                if (typeof (launch._chartList) == 'undefined')
+                    launch._chartList = [];
+                /*if (typeof(launch.haldata) == 'undefined')
+                    launch.haldata = haldata; */
 
-            _chart.view = _dashboard
-                .configureView({ barTitle: true, btClose: false, draggable: true, resizable: true, aspectRatio: true })
-                .newView(0, 0);
+                _chart.view = _dashboard
+                    .configureView({
+                        barTitle: true,
+                        btClose: false,
+                        draggable: true,
+                        resizable: true,
+                        aspectRatio: true,
+                        btLegend: true
+                    })
+                    .newView(0, 0);
 
-            _chart.chart = NodeEdgeChart(_chart.view.idChart()).box({ width: MG_WidthChart, height: MG_HeightChart });
-            _chart.chart.indexAttrSize(ATN_Degree);
-            _chart.view.conectChart(_chart.chart, NodeEdgePanel);
+                _chart.chart = NodeEdgeChart(_chart.view.idChart()).box({ width: MG_WidthChart, height: MG_HeightChart });
+                console.log(_chart.chart)
+                _chart.chart.indexAttrSize(ATN_Degree);
+                _chart.view.conectChart(_chart.chart, NodeEdgePanel, NodeEdgeLegend);
 
-            _IdChartRoot = _dashboard.addChart(0, {
-                id: _chart.view.idChart(), title: "", typeChart: "NE", hidden: false,
-                x: 0, y: 0, chart: _chart.chart, view: _chart.view
-            });
+                _IdChartRoot = _dashboard.addChart(0, {
+                    id: _chart.view.idChart(), title: "", typeChart: "NE", hidden: false,
+                    x: 0, y: 0, chart: _chart.chart, view: _chart.view
+                });
 
-            _historyTree.view = _dashboard
-                .configureView({
+                _historyTree.view = _dashboard
+                    .configureView({
+                        barTitle: true,
+                        btTool: false,
+                        btClose: false,
+                        draggable: true,
+                        resizable: true,
+                        aspectRatio: true,
+                        btLegend: false
+                    })
+                    .newView(0, 400);
+                    
+                _historyTree.chart = HistoryTreeChart(_historyTree.view.idChart(), _dashboard)
+                    .box({ width: 300, height: 100 })
+                    .data(_dashboard.getTree());
+
+                _historyTree.view.conectChart(_historyTree.chart, HistoryTreePanel);
+                _historyTree.view.setTitle("History:");
+
+                _dashboard.historyChart(_historyTree.chart);
+                _dashboard.configureView({
                     barTitle: true,
-                    btTool: false,
+                    btTool: true,
                     btClose: false,
                     draggable: true,
                     resizable: true,
-                    aspectRatio: true
-                })
-                .newView(0, 400);
-            _historyTree.chart = HistoryTreeChart(_historyTree.view.idChart(), _dashboard)
-                .box({ width: 300, height: 100 })
-                .data(_dashboard.getTree());
+                    aspectRatio: true,
+                    btLegend: false
+                });
 
-            _historyTree.view.conectChart(_historyTree.chart, HistoryTreePanel);
-            _historyTree.view.setTitle("History:");
+                launch._dashboard = _dashboard;
+                launch._charts = _chart;
+                launch._historyTree = _historyTree;
 
-            _dashboard.historyChart(_historyTree.chart);
-            _dashboard.configureView({
-                barTitle: true,
-                btTool: true,
-                btClose: false,
-                draggable: true,
-                resizable: true,
-                aspectRatio: true
-            });
-
-            _showChartRoot(_IdChartRoot, false);
+                _showChartRoot(_IdChartRoot, false);
+            } else { //if followupQuery
+                _dashboard = launch._dashboard;
+                _chart = launch._charts;
+                _historyTree = launch._historyTree;
+                _showNodeEdge(null, _dashboard.parentId, null, _dashboard.title);
+            }
 
             //--------------------------------- Private functions
             function _showChartRoot(idChart, novo) {
                 if (novo) {
-                    _dashboard.removeTudo();
+                    // _dashboard.removeTudo();
                     _dashboard = Dashboard("viewArea");
 
                     //_selectedQuery = parseInt($("#selectQuery")[0].selectedIndex);
@@ -161,20 +204,21 @@ function launch(haldata, datatype, name1, name2) {
                             btClose: false,
                             draggable: true,
                             resizable: true,
-                            aspectRatio: true
+                            aspectRatio: true,
+                            btLegend: true
                         })
-                        .newView(0, 0);
+                        .newView(20, 0);
 
                     _chart.chart = NodeEdgeChart(_chart.view.idChart()).box({
                         width: MG_WidthChart,
                         height: MG_HeightChart
                     });
                     _chart.chart.indexAttrSize(ATN_Degree);
-                    _chart.view.conectChart(_chart.chart, NodeEdgePanel);
+                    _chart.view.conectChart(_chart.chart, NodeEdgePanel, NodeEdgeLegend);
 
                     _IdChartRoot = _dashboard.addChart(0, {
                         id: _chart.view.idChart(), title: "", typeChart: "NE", hidden: false,
-                        x: 0, y: 0, chart: _chart.chart, view: _chart.view
+                        x: 10, y: 10, chart: _chart.chart, view: _chart.view
                     });
 
                     _historyTree.view = _dashboard
@@ -184,7 +228,8 @@ function launch(haldata, datatype, name1, name2) {
                             btClose: false,
                             draggable: true,
                             resizable: true,
-                            aspectRatio: true
+                            aspectRatio: true,
+                            btLegend: false
                         })
                         .newView(0, 400);
                     _historyTree.chart = HistoryTreeChart(_historyTree.view.idChart(), _dashboard)
@@ -201,21 +246,31 @@ function launch(haldata, datatype, name1, name2) {
                         btClose: false,
                         draggable: true,
                         resizable: true,
-                        aspectRatio: true
+                        aspectRatio: true,
+                        btLegend: false
                     })
+
                 }
 
                 _loadDataProcess(haldata, 0, idChart)
             }
 
             //------ Loads a new dataset
-            function _loadDataProcess(data, codArquivo, idChart) {
+            function _loadDataProcess(data, codArquivo, idChart, followupQuery, repaint) {
                 var objChart = _dashboard.getChart(idChart);
-                var title = "Co-autorship";
-                if (datatype == 1) title = title + " within the " + name1;
-                else title = title + " between " + name1 + " and " + name2;
+                var title = "Co-publication";
+
+                if (datatype == 1 && name1 !== undefined) title = title + " in " + name1;
+
+                else if (name1 !== undefined && name2 !== undefined) { // Fix this later
+                    title = title + " between " + name1 + " and " + name2;
+                }
+                else {
+                    // title = title + " for " + " <variable> ";
+                }
 
                 _data = JSON.parse(data);
+                
                 // Includes idOrig attribute
                 _data.nodes.dataNodes.forEach(function (node) {
                     node.idOrig = node.id;
@@ -231,6 +286,11 @@ function launch(haldata, datatype, name1, name2) {
                 objChart.chart.panel().atualizaAutocomplete();
 
                 _historyTree.chart.data(_dashboard.getTree());
+                launch._chartList.push({
+                    chart: objChart,
+                    _data: _data
+                });
+                launch.counter += 1;
             }
 
             //------ Initializes all context menus
@@ -241,6 +301,7 @@ function launch(haldata, datatype, name1, name2) {
                     { label: "Iris", fActionNode: _fActionNodeNE_IC, fActionEdge: _fActionNotApplicable },
                     { label: "Histogram", fActionNode: _fActionNodeNE_HC, fActionEdge: _fActionNotImplemented },
                     { label: "GlyphMatrix", fActionNode: _fActionNodeNE_GM, fActionEdge: _fActionEdgeNE_GM },
+                    //{ label: "New Query", fActionNode: _fActionNodeNE_NQ, fActionEdge: _fActionNotImplemented }
                 ]);
 
                 _dashboard.setItensContextMenu(TC_ClusterVis, [
@@ -249,7 +310,8 @@ function launch(haldata, datatype, name1, name2) {
                     { label: "Iris", fActionNode: _fActionNodeCV_IC },
                     { label: "Histogram", fActionNode: _fActionNodeNE_HC },
                     { label: "GlyphMatrix", fActionNode: _fActionNodeCV_GM },
-                    { label: "Papers' List", fActionNode: _fActionNodeCV_PL }
+                    { label: "Papers' List", fActionNode: _fActionNodeCV_PL },
+                    //{ label: "New Query", fActionNode: _fActionNodeCV_NQ }
                 ]);
 
                 _dashboard.setItensContextMenu(TC_Iris, [
@@ -279,14 +341,36 @@ function launch(haldata, datatype, name1, name2) {
                     { label: "Histogram", fActionNode: _fActionNodeIC_HCCluster },
                 ]);
 
-                _dashboard.setItensContextMenu(TC_NodeEdge_HAL, [
-                    // { label: "NodeEdge", fActionNode: _fActionNotImplemented, fActionEdge: _fActionNotImplemented },
-                    { label: "ClusterVis", fActionNode: _fActionNodeNE_CV, fActionEdge: _fActionNotImplemented },
-                    { label: "Iris", fActionNode: _fActionNodeNE_IC, fActionEdge: _fActionNotApplicable },
-                    { label: "GlyphMatrix", fActionNode: _fActionNodeNE_GM, fActionEdge: _fActionEdgeNE_GM },
-                    { label: "Histogram", fActionNode: _fActionNodeNE_HC, fActionEdge: _fActionNotImplemented },
-                    { label: "Papers' List", fActionNode: _fActionNodeNE_PL, fActionEdge: _fActionEdgeNE_PL }
-                ]);
+                if (_canNodeRedirectCorese) {
+                    _dashboard.setItensContextMenu(TC_NodeEdge_HAL, [
+                        // { label: "NodeEdge", fActionNode: _fActionNotImplemented, fActionEdge: _fActionNotImplemented },
+                        { label: "ClusterVis", fActionNode: _fActionNodeNE_CV, fActionEdge: _fActionNotImplemented },
+                        { label: "Iris", fActionNode: _fActionNodeNE_IC, fActionEdge: _fActionNotApplicable },
+                        { label: "GlyphMatrix", fActionNode: _fActionNodeNE_GM, fActionEdge: _fActionEdgeNE_GM },
+                        { label: "Histogram", fActionNode: _fActionNodeNE_HC, fActionEdge: _fActionNotImplemented },
+                        { label: "Papers' List", fActionNode: _fActionNodeNE_PL, fActionEdge: _fActionEdgeNE_PL },
+                        { label: "Corese Browser", fActionNode: _fActionNodeNE_CI, fActionEdge: _fActionNotImplemented },
+                        // {
+                        //     label: "New Query", fActionNode: _fActionNodeNE_NQ, fActionEdge: _fActionNotImplemented,
+                        //     styleSheet: _stylesheet, submenu: true
+                        // },
+                    ]);
+                } else {
+                    _dashboard.setItensContextMenu(TC_NodeEdge_HAL, [
+                        // { label: "NodeEdge", fActionNode: _fActionNotImplemented, fActionEdge: _fActionNotImplemented },
+                        { label: "ClusterVis", fActionNode: _fActionNodeNE_CV, fActionEdge: _fActionNotImplemented },
+                        { label: "Iris", fActionNode: _fActionNodeNE_IC, fActionEdge: _fActionNotApplicable },
+                        { label: "GlyphMatrix", fActionNode: _fActionNodeNE_GM, fActionEdge: _fActionEdgeNE_GM },
+                        { label: "Histogram", fActionNode: _fActionNodeNE_HC, fActionEdge: _fActionNotImplemented },
+                        { label: "Papers' List", fActionNode: _fActionNodeNE_PL, fActionEdge: _fActionEdgeNE_PL },
+                        // {
+                        //     label: "New Query", fActionNode: _fActionNodeNE_NQ, fActionEdge: _fActionNotImplemented,
+                        //     styleSheet: _stylesheet, submenu: true
+                        // },
+                    ]);
+                }
+
+
 
                 _dashboard.setItensContextMenu(TC_ClusterVis_HAL, [
                     // { label: "NodeEdge", fActionNode: _fActionNotImplemented },
@@ -308,7 +392,7 @@ function launch(haldata, datatype, name1, name2) {
                 _showClusterVis(node, parentId);
             }
 
-            //---------------	
+            //---------------
             function _fActionNodeNE_IC(node, parentId, parentChart) {
                 _showIris(node, parentId, parentChart);
             }
@@ -327,9 +411,12 @@ function launch(haldata, datatype, name1, name2) {
                 _showHistogram(node, parentId);
             }
 
+            function _fActionNodeNE_NQ(node, parentId, parentChart) {
+            }
 
 
-            //---------------	
+
+            //---------------
             function _fActionEdgeNE_GM(edge, parentId) {
                 let data, posicaoPai, title;
 
@@ -384,7 +471,7 @@ function launch(haldata, datatype, name1, name2) {
                     _chart.chart
                         .data(data);
 
-                    _chart.chart.setTTMatrixCell(_tooltips.matrixCell(data, _glyphStar, ATN_ShortName));
+                    _chart.chart.setTTMatrixCell(_tooltips.matrixCell(data, _glyphStar, ATN_AuthorName));
                     _historyTree.chart.data(_dashboard.getTree());
                     _chart.view.show(true);
                 }, 100);
@@ -403,7 +490,7 @@ function launch(haldata, datatype, name1, name2) {
                 _showClusterVis(node, parentId);
             }
 
-            //---------------	
+            //---------------
             function _fActionNodeCV_IC(node, parentId) {
                 _showIris(node, parentId);
             }
@@ -418,8 +505,40 @@ function launch(haldata, datatype, name1, name2) {
                 _showPapersList(node, parentId, false, undefined, true);
             }
 
+            //---------------
             function _fActionNodeCV_HC(node, parentId) {
                 _showHistogram(node, parentId, false, undefined, true);
+            }
+
+            function _fActionNodeCV_NQ(node, parentId) {
+                console.log("oula");
+            }
+
+            //---------------
+            function _fActionNodeNE_CI(node, parentId) {
+                const data = _subGraph.allPapersList(node, _data);              // Get a data structure that has url in it (for this test example)
+
+                const baseUrl = _stylesheet.browser.url
+
+                const uriUrl = node.labels[1]                                   // Url parameter for the redirection.
+
+                // Check if the clicked node is an URI and can be linked to the given browser
+                if (isURI(uriUrl)) {
+                    window.open(baseUrl + uriUrl);                              // Opens a new window with the given URL
+                } else {
+                    alert("Cette entitée ne posséde pas d'entrée en ligne")
+                }
+
+            }
+
+            function isURI(str) {
+                var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+                    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+                    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+                    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+                    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+                    '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+                return !!pattern.test(str);
             }
 
             //=======================
@@ -490,12 +609,12 @@ function launch(haldata, datatype, name1, name2) {
                 _showClusterVis(node, parentId);
             }
 
-            //---------------	
+            //---------------
             function _fActionNodeGM_IC(node, parentId) {
                 _showIris(node, parentId);
             }
 
-            //---------------	
+            //---------------
             function _fActionNodeGM_GM(node, parentId) {
                 _showGlyphMatrix(node, parentId);
             }
@@ -520,6 +639,68 @@ function launch(haldata, datatype, name1, name2) {
             //=======================
             // Displays Techniques
             //=======================
+
+            //---------------------------------
+            function _showNodeEdge(node, parentId, parent, title) {
+                let data, posicaoPai, queryName;
+
+                data = JSON.parse(haldata)
+
+                posicaoPai = _dashboard.getChart(parentId).view.getPosition();
+
+                _chart.view = _dashboard
+                    .configureView({
+                        barTitle: true,
+                        btTool: true,
+                        btClose: true,
+                        draggable: true,
+                        resizable: true,
+                        aspectRatio: true,
+                        visible: true
+                    })
+                    .newView(posicaoPai.x + 20, posicaoPai.y + 20);
+
+                _chart.chart = NodeEdgeChart(_chart.view.idChart()).box({
+                    width: MG_WidthChart,
+                    height: MG_HeightChart
+                });
+                _chart.chart.indexAttrSize(ATN_Degree);
+                _chart.view.conectChart(_chart.chart, NodeEdgePanel);
+
+                queryName = title.startsWith("query") ?
+                    title.split("query")[1] : "";
+                title = "Co-publication Followup Query " + queryName;
+
+                _IdChartRoot = _dashboard.addChart(parentId, {
+                    id: _chart.view.idChart(),
+                    title: title,
+                    hidden: false,
+                    x: _chart.view.getPosition().x,
+                    y: _chart.view.getPosition().y,
+                    chart: _chart.chart,
+                    view: _chart.view
+                });
+
+                _chart.view.setTitle(title);
+
+                data.nodes.dataNodes.forEach(function (node) {
+                    node.idOrig = node.id;
+                });
+
+                _chart.chart.setTTNormalNode(_tooltips.normalNode(data, ATN_AuthorName, [ATN_Category, ATN_LinhaPesq, ATN_QtLinhaPesq, ATN_QtPublicacoes], _headerTitle));
+                _chart.chart.setTTNormalEdge(_tooltips.normalEdge(data, ATN_AuthorName, [ATE_QtPublicacoes]));
+
+                _chart.chart.data(data);
+
+                _chart.chart.panel().atualizaAutocomplete();
+                launch._chartList.push({
+                    chart: _dashboard.getChart(_chart.view.idChart()),
+                    _data: data
+                });
+                launch.counter += 1;
+
+                _historyTree.chart.data(_dashboard.getTree());
+            }
 
             //---------------------------------
             function _showClusterVis(node, parentId) {
@@ -550,13 +731,14 @@ function launch(haldata, datatype, name1, name2) {
                 });
                 _chart.view.conectChart(_chart.chart, ClusterVisPanel);
 
-                // if (node.cluster) {
-                //     title = node.key + "\'s cluster";
-                //     _chart.view.setTitle(title);
-                // } else {
-                title = node.labels[ATN_ShortName] + " and " + _headerTitle + " (" + data.nodes.dataNodes.length + " clusters)";
-                _chart.view.setTitle(title);
-                // }
+                if (node.cluster) {
+                    // title = node.key + "\'s cluster";
+                    title = node.labels[ATN_AuthorName] + "\'s cluster";
+                    _chart.view.setTitle(title);
+                } else {
+                    title = node.labels[ATN_AuthorName] + " and " + headerParameter + _headerTitle + " (" + data.nodes.dataNodes.length + " clusters)";
+                    _chart.view.setTitle(title);
+                }
 
                 _dashboard.addChart(parentId, {
                     id: _chart.view.idChart(),
@@ -568,6 +750,16 @@ function launch(haldata, datatype, name1, name2) {
                     chart: _chart.chart,
                     view: _chart.view
                 });
+
+                if (launch._chartList.length !== 1) {
+                    var parentChartId = getParentChart(parentId);
+                    data = getDataOfChart(parentChartId);
+                    if (node.cluster) {
+                        data = _subGraph.clusterClusterVis(node, data);
+                    } else {
+                        data = _subGraph.normalClusterVis(node, data);
+                    }
+                }
 
                 _chart.chart
                     .indexAttrSort(ATN_Category)     // Numeric attribute 0. Must be before date ()
@@ -587,6 +779,26 @@ function launch(haldata, datatype, name1, name2) {
 
             }
 
+            function getDataOfChart(idChart) {
+                var res = null;
+                if (launch._chartList && launch._chartList.length > 0) {
+                    launch._chartList.forEach((value, index) => {
+                        if (value.chart.id === idChart)
+                            res = value._data;
+                    });
+                    if (launch._chartList.length === 1 && launch._chartList[0].chart.id === "view-1-c")
+                        return launch._chartList[0];
+                    return res;
+                }
+            }
+
+            function getParentChart(parentId) {
+                var __chart = _dashboard.getChart(parentId);
+                if (__chart && __chart.title && __chart.title.startsWith("Co-publication"))
+                    return parentId;
+                return getParentChart(__chart.parent.id);
+            }
+
             //---------------------------------
             function _showIris(node, parentId, parent) {
                 let data, posicaoPai, title;
@@ -597,7 +809,6 @@ function launch(haldata, datatype, name1, name2) {
                 // }
 
                 data = _subGraph.normalIris(node, _data);
-
                 posicaoPai = _dashboard.getChart(parentId).view.getPosition();
 
                 if (parent === undefined) {
@@ -622,10 +833,15 @@ function launch(haldata, datatype, name1, name2) {
                     _chart.view.setIdChart("view-" + newId + "-c");
                     _chart.chart = parent.chart;
                 }
+                if (launch._chartList.length !== 1) {
+                    var parentChartId = getParentChart(parentId);
+                    data = getDataOfChart(parentChartId);
+                    data = _subGraph.normalIris(node, data);
+                }
 
                 _chart.view.conectChart(_chart.chart, IrisPanel);
 
-                title = node.labels[ATN_ShortName] + " and " + data.children.data.length + " " + _headerTitle;
+                title = node.labels[ATN_AuthorName] + " and " + data.children.data.length + " " + headerParameter + _headerTitle;
 
                 _chart.view.setTitle(title);
 
@@ -640,7 +856,9 @@ function launch(haldata, datatype, name1, name2) {
                     view: _chart.view
                 });
 
-                _chart.chart.configCentroid(ATN_ShortName, _headerTitle, ATN_ShortName); // Must be before date function
+                _inicContextMenu();
+
+                _chart.chart.configCentroid(ATN_AuthorName, headerParameter + _headerTitle, ATN_AuthorName); // Must be before date function
                 _chart.chart.indexAttrBar(ATE_QtPublicacoes);
                 _chart.chart.data(data);
 
@@ -649,12 +867,10 @@ function launch(haldata, datatype, name1, name2) {
                 _chart.view.show(true);
             }
 
-            //---------------------------------	
+            //---------------------------------
             function _showGlyphMatrix(node, parentId) {
                 let data, posicaoPai, title;
                 if (node.cluster) {
-                    // alert("Not implemented!!");
-                    // return;
                     data = _subGraph.clusterMatrixGlyph(node, _data);
                 } else {
                     data = _subGraph.normalMatrixGlyph(node, _data);
@@ -679,13 +895,13 @@ function launch(haldata, datatype, name1, name2) {
                 });
                 _chart.view.conectChart(_chart.chart, MatrixGlyphPanel);
 
-                // if (node.cluster) {
-                //     title = node.key + "\'s cluster";
-                //     _chart.view.setTitle(title);
-                // } else {
-                title = node.labels[ATN_ShortName] + " and " + _headerTitle;
-                _chart.view.setTitle(title);
-                // }
+                if (node.cluster) {
+                    title = node.labels[ATN_AuthorName] + "\'s cluster";
+                    _chart.view.setTitle(title);
+                } else {
+                    title = node.labels[ATN_AuthorName] + " and " + headerParameter + _headerTitle;
+                    _chart.view.setTitle(title);
+                }
 
                 _dashboard.addChart(parentId, {
                     id: _chart.view.idChart(),
@@ -706,10 +922,20 @@ function launch(haldata, datatype, name1, name2) {
                         .glyph(_glyphStar)
                         .cellColorsMap(["#99E6E6"]);
 
+                    if (launch._chartList.length !== 1) {
+                        var parentChartId = getParentChart(parentId);
+                        data = getDataOfChart(parentChartId);
+                        if (node.cluster) {
+                            data = _subGraph.clusterMatrixGlyph(node, data);
+                        } else {
+                            data = _subGraph.normalMatrixGlyph(node, data);
+                        }
+                    }
+
                     _chart.chart
                         .data(data);
 
-                    _chart.chart.setTTMatrixCell(_tooltips.matrixCell(data, _glyphStar, ATN_ShortName));
+                    _chart.chart.setTTMatrixCell(_tooltips.matrixCell(data, _glyphStar, ATN_AuthorName));
                     _historyTree.chart.data(_dashboard.getTree());
                     _chart.view.show(true);
                 }, 100);
@@ -732,6 +958,18 @@ function launch(haldata, datatype, name1, name2) {
                     data = _subGraph.clusterPapersList(node, _data);
                 }
 
+                if (launch._chartList.length !== 1) {
+                    var parentChartId = getParentChart(parentId);
+                    data = getDataOfChart(parentChartId);
+                    if (!isFromEdge && !isFromCluster) {
+                        data = _subGraph.allPapersList(node, data);
+                    } else if (isFromEdge) {
+                        data = _subGraph.duoPapersList(node, secondNode, data);
+                    } else if (isFromCluster) {
+                        data = _subGraph.clusterPapersList(node, data);
+                    }
+                }
+
                 posicaoPai = _dashboard.getChart(parentId).view.getPosition();
 
                 _chart.view = _dashboard
@@ -751,11 +989,11 @@ function launch(haldata, datatype, name1, name2) {
                 let nbPapers = data.root.data.documents.length;
 
                 if (!isFromEdge && !isFromCluster) {
-                    title = node.labels[ATN_ShortName] + "'s " + nbPapers + _headerTitle + " papers";
+                    title = node.labels[ATN_AuthorName] + "'s " + nbPapers + headerParameter + _headerTitle + " papers";
                 } else if (isFromEdge) {
-                    title = node.labels[ATN_ShortName] + "/" + secondNode.labels[ATN_ShortName] + "'s " + nbPapers + _headerTitle + " papers";
+                    title = node.labels[ATN_AuthorName] + "/" + secondNode.labels[ATN_AuthorName] + "'s " + nbPapers + headerParameter + _headerTitle + " papers";
                 } else if (isFromCluster) {
-                    title = node.labels[ATN_ShortName] + "'s cluster's " + nbPapers + _headerTitle + " papers";
+                    title = node.labels[ATN_AuthorName] + "'s cluster's " + nbPapers + headerParameter + _headerTitle + " papers";
                 }
                 _chart.view.setTitle(title);
 
@@ -778,7 +1016,7 @@ function launch(haldata, datatype, name1, name2) {
                 _chart.view.show(true);
             }
 
-            //---------------------------------	
+            //---------------------------------
             function _showHistogram(node, parentId, isFromEdge, secondNode, isFromCluster) {
                 let data, posicaoPai, title;
                 // if (node.cluster) {
@@ -794,6 +1032,18 @@ function launch(haldata, datatype, name1, name2) {
                     data = _subGraph.duoPapersList(node, secondNode, _data);
                 } else if (isFromCluster) {
                     data = _subGraph.clusterPapersList(node, _data);
+                }
+
+                if (launch._chartList.length !== 1) {
+                    var parentChartId = getParentChart(parentId);
+                    data = getDataOfChart(parentChartId);
+                    if (!isFromEdge && !isFromCluster) {
+                        data = _subGraph.allPapersList(node, data);
+                    } else if (isFromEdge) {
+                        data = _subGraph.duoPapersList(node, secondNode, data);
+                    } else if (isFromCluster) {
+                        data = _subGraph.clusterPapersList(node, data);
+                    }
                 }
                 // data = _subGraph.allPapersList(node, _data);
 
@@ -811,11 +1061,11 @@ function launch(haldata, datatype, name1, name2) {
                 _chart.view.conectChart(_chart.chart, HistogramPanel);
 
                 if (!isFromEdge && !isFromCluster) {
-                    title = node.labels[ATN_ShortName] + "'s " + nbPapers + _headerTitle + " papers";
+                    title = node.labels[ATN_AuthorName] + "'s " + nbPapers + headerParameter + _headerTitle + " papers";
                 } else if (isFromEdge) {
-                    title = node.labels[ATN_ShortName] + "/" + secondNode.labels[ATN_ShortName] + "'s " + nbPapers + _headerTitle + " papers";
+                    title = node.labels[ATN_AuthorName] + "/" + secondNode.labels[ATN_AuthorName] + "'s " + nbPapers + headerParameter + _headerTitle + " papers";
                 } else if (isFromCluster) {
-                    title = node.labels[ATN_ShortName] + "'s cluster's " + nbPapers + _headerTitle + " papers";
+                    title = node.labels[ATN_AuthorName] + "'s cluster's " + nbPapers + headerParameter + _headerTitle + " papers";
                 }
 
                 _chart.view.setTitle(title);
@@ -825,7 +1075,7 @@ function launch(haldata, datatype, name1, name2) {
                     x: _chart.view.getPosition().x, y: _chart.view.getPosition().y, chart: _chart.chart, view: _chart.view
                 });
 
-                _chart.chart.configCentroid(ATN_ShortName, _headerTitle, ATN_ShortName); // Must be before date function
+                _chart.chart.configCentroid(ATN_AuthorName, headerParameter + _headerTitle, ATN_AuthorName); // Must be before date function
                 _chart.chart.indexAttrBar(ATE_QtPublicacoes);
                 _chart.chart.data(data);
 
@@ -837,3 +1087,4 @@ function launch(haldata, datatype, name1, name2) {
         }
     );
 }
+

@@ -31,8 +31,10 @@ define(["model","libCava"], function (Model) {
             _grpChart = _svg.append("g");
         _grpHistory = _grpChart.append("g").attr("class","HistoryTreeChart");
 
-        let _zoomListenerTree = d3.behavior.zoom().on("zoom", _chartZoomTree);
-        _svg.call(_zoomListenerTree);
+        // Add zoom event
+        let _zoomListener = d3.behavior.zoom().on("zoom", _chartZoom);
+        _zoomListener.scaleExtent([_zoomListener.scale() * 0.9, _zoomListener.scale() * 1.1]);
+        _svg.call(_zoomListener);
 
 
 //===================================================
@@ -102,10 +104,12 @@ define(["model","libCava"], function (Model) {
                 });
         }
 
-        function _chartZoomTree() {
-            let zoomTranslate = _zoomListenerTree.translate();
-            _grpChart.attr("transform",
-                "translate("+zoomTranslate[0]+","+zoomTranslate[1] + ")");
+        /**
+         * Zoom event
+         */
+        function _chartZoom() {
+            _zoomListener.scaleExtent([_zoomListener.scale() * 0.9, _zoomListener.scale() * 1.1]);
+            _grpChart.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
         }
 
 //--------------------------------- Public functions

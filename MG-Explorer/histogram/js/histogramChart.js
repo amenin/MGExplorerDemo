@@ -106,6 +106,25 @@ define(["model", "libCava"], function (Model, LibCava) {
         let _svg = d3.select("#" + idDiv).append("svg"),  // Create dimensionless svg
             _sort = lcv.sortIris(),                     // Creates sorting function
             _grpChart = _svg.append("g");                       // Does not exist in the original Iris
+        // Add zoom event
+        let _zoomListener = d3.behavior.zoom().on("zoom", _chartZoom);
+        _zoomListener.scaleExtent([_zoomListener.scale() * 0.9, _zoomListener.scale() * 1.1]);
+        _svg.call(_zoomListener);
+
+        let _helpContainer = d3.select("#" + idDiv).append("div")
+            .attr("class", "helpContainer")
+            .on("mouseover", _openToolTip)
+            .on("mouseout", _closeToolTip);
+
+        _helpContainer.append("i")
+            .attr("class", "fa fa-info-circle")
+            .style("font-size", "24px")
+
+        let _helpTooltip = d3.select("#" + idDiv).append("div")
+            .attr("class", "helpTooltip")
+            .attr("style", "width:40%;height:80px")
+
+            .style("display", "none");
 
         _grpHistogram = _grpChart.append("g").attr("class", "HistogramChart").attr("transform", "translate(30,20)");
 
@@ -243,7 +262,6 @@ define(["model", "libCava"], function (Model, LibCava) {
                 .scale(_x)
                 .orient("bottom");
 
-            getMaximumOrdinate();
             // Y axis: 
             _y = d3.scale.linear()
 
@@ -258,11 +276,11 @@ define(["model", "libCava"], function (Model, LibCava) {
                 .text("<Should be custom parameter>");
 
 
-            _ordinateTitle = _grpHistogram.append("g")
+            _ordinateTitle = _helpTooltip.append("svg")
                 .attr("class", "HC-legend")
-                .attr("transform", "translate(0,0)")
                 .attr("y", 1)
                 .attr("dy", ".71em")
+
 
             _ordinate = _grpHistogram.append("g")
                 .attr("class", "HC-ordina")
@@ -305,9 +323,6 @@ define(["model", "libCava"], function (Model, LibCava) {
                 .attr("transform", function (d) { return "translate(0,0)"; })
                 .attr("width", function (d) { return _x.rangeBand() - 0.5 })
                 .attr("height", function (d) { return (model.box.height - _abscissaBottomMargin) })
-                .on("mouseover", d => {
-                    console.log(d);
-                })
 
             let index = 0;
 
@@ -329,10 +344,10 @@ define(["model", "libCava"], function (Model, LibCava) {
                     .attr("width", 10)
                     .attr("height", 10)
                     .style("fill", _colorsBars[_getTheIndex(type)])
-                    .attr("transform", (d) => "translate(" + model.box.width * 0.81 + "," + 20 * index + ")");
+                    .attr("transform", (d) => "translate(10," + `${20 * index + 10}` + ")");
 
                 _ordinateTitle.append("text")
-                    .attr("transform", (d) => "translate(" + model.box.width * 0.83 + "," + 20 * index + ")")
+                    .attr("transform", (d) => "translate(30," + `${20 * index + 10}` + ")")
                     .attr("y", "10")
                     .text(type)
                     .append("title")
@@ -356,7 +371,12 @@ define(["model", "libCava"], function (Model, LibCava) {
             return orderedDocumentArray
         }
 
-        function getMaximumOrdinate() {
+        function _openToolTip() {
+            _helpTooltip.style("display", "block");
+        }
+
+        function _closeToolTip() {
+            _helpTooltip.style("display", "none");
 
         }
 
@@ -381,6 +401,14 @@ define(["model", "libCava"], function (Model, LibCava) {
                 case "article":
                     return 3;
             }
+        }
+
+        /**
+         * Zoom event
+         */
+        function _chartZoom() {
+            _zoomListener.scaleExtent([_zoomListener.scale() * 0.9, _zoomListener.scale() * 1.1]);
+            _grpChart.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
         }
 
         //--------------------------------- Public functions

@@ -3,6 +3,7 @@ require.config({
   // A refer�ncia � o local do require.js 
 
   paths: {
+    ejs: '../../lib/ejs',
     model: '../../lib/model-min',
     d3: '../../lib/d3.min',
     jquery: '../../lib/jquery-1.11.3.min',
@@ -17,6 +18,7 @@ require.config({
 
     nodeEdgeChart: '../../nodeEdge/js/nodeEdgeChart',
     nodeEdgePanel: '../../nodeEdge/js/nodeEdgePanel',
+    nodeEdgeLegend: '../../nodeEdge/js/nodeEdgeLegend',
     algCluster: '../../nodeEdge/js/algCluster',
 
     clusterVisChart: '../../clusterVis/js/clusterVisChart',

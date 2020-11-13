@@ -39,6 +39,10 @@ define(["model", "libCava"], function (Model) {
         let _container = d3.select("#" + idDiv).append("div").attr("class", "PL-container");
         let _svg = _container.append("svg"),  // Create dimensionless svg
             _grpChart = _svg.append("g");
+        // Add zoom event
+        let _zoomListener = d3.behavior.zoom().on("zoom", _chartZoom);
+        _zoomListener.scaleExtent([_zoomListener.scale() * 0.9, _zoomListener.scale() * 1.1]);
+        _svg.call(_zoomListener);
 
         _svg.attr("class", "PaperListView");
         _grpPapersList = _grpChart.append("g").attr("class", "PapersListChart");
@@ -81,7 +85,9 @@ define(["model", "libCava"], function (Model) {
 
                     let names = " ";
                     for (let i = 0; i < model.data.children.data.length; i++) {
-                        names += model.data.children.data[i].labels[0];
+                        // names += model.data.children.data[i].labels[0];
+                        names += model.data.children.data[i].labels[1];
+
                         if (i !== model.data.children.data.length - 1) {
                             names += ", ";
                         }
@@ -187,12 +193,7 @@ define(["model", "libCava"], function (Model) {
                 _grpPapers.append("text")
                     .attr("class", "PL-infos")
                     .text(function (d) {
-                        let authorsNames = "";
-                        for (let i = 0; i < d.authors.length; i++) {
-                            authorsNames += _findAuthorById(d.authors[i]);
-                            if (i !== d.authors.length - 1)
-                                authorsNames += ", ";
-                        }
+                        let authorsNames = _getAuthorList(d);
                         return authorsNames + " - " + d.date + " - " + d.link.slice(d.link.length - 2);
                     })
                     .attr("x", x)
@@ -200,18 +201,26 @@ define(["model", "libCava"], function (Model) {
                     .style("font-size", "12px")
                     .append("title")
                     .text(function (d) {
-                        let authorsNames = "";
-                        for (let i = 0; i < d.authors.length; i++) {
-                            authorsNames += _findAuthorById(d.authors[i]);
-                            if (i !== d.authors.length - 1)
-                                authorsNames += ", ";
-                        }
+                        let authorsNames = _getAuthorList(d);
                         return authorsNames + " - " + d.date + " - " + d.link.slice(d.link.length - 2);
                     });
 
             } // End
         );
         //--------------------------------- Private functions
+
+        function _getAuthorList(d) {
+            if (d.authorList != null) {
+                return d.authorList;
+            }
+            let authorsNames = "";
+            for (let i = 0; i < d.authors.length; i++) {
+                authorsNames += _findAuthorById(d.authors[i]);
+                if (i !== d.authors.length - 1)
+                    authorsNames += ", ";
+            }
+            return authorsNames;
+        }
 
         /**
          *
@@ -249,9 +258,9 @@ define(["model", "libCava"], function (Model) {
         function _findAuthorById(id) {
             for (let i = 0; i < model.data.children.data.length; i++) {
                 if (model.data.children.data[i].id === id) {
-                    return model.data.children.data[i].labels[0];
+                    return model.data.children.data[i].labels[1];
                 } else if (model.data.children.data[i].idOrig === id) {
-                    return model.data.children.data[i].labels[0];
+                    return model.data.children.data[i].labels[1];
                 }
             }
             if (model.data.children.others.length === 0) {
@@ -259,14 +268,21 @@ define(["model", "libCava"], function (Model) {
             } else {
                 for (let j = 0; j < model.data.children.others.length; j++) {
                     if (model.data.children.others[j].id === id) {
-                        return model.data.children.others[j].labels[0];
+                        return model.data.children.others[j].labels[1];
                     } else if (model.data.children.others[j].idOrig === id) {
-                        return model.data.children.others[j].labels[0];
+                        return model.data.children.others[j].labels[1];
                     }
                 }
             }
         }
 
+        /**
+         * Zoom event
+         */
+        function _chartZoom() {
+            _zoomListener.scaleExtent([_zoomListener.scale() * 0.9, _zoomListener.scale() * 1.1]);
+            _grpChart.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+        }
 
         //--------------------------------- Public functions
 

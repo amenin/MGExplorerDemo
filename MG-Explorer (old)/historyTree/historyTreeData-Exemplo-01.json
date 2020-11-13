@@ -1,0 +1,20 @@
+{
+ "id" : 1, "title": "Year 2011-Computer Graphics", "hidden":false, 
+ "children": 
+	[ 
+	  { "id":2, "title":"ClusterVis-NAVAUX and coauthors", "hidden":false,
+		"children":
+		   [
+		     { "id":3, "title":"GlyphMatrix-NAVAUX and coauthors", "hidden":false} 
+		   ]
+	  },
+	  { "id":4, "title":"ClusterVis-OLIVEIRA and coauthors", "hidden":false,
+		"children":
+		   [
+		     { "id":5, "title":"IRIS-COMBA and coauthors", "hidden":false},
+			 { "id":6, "title":"IRIS-MACIEL and coauthors", "hidden":false}
+		   ]	  
+	  },
+	  { "id":4, "title":"IRIS-OLIVEIRA and coauthors", "hidden":false}
+	]
+}

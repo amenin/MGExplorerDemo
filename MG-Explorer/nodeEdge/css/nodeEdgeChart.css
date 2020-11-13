@@ -16,7 +16,7 @@
 .NE-node.NE-HighSearch {
   stroke: #FF6600;
   stroke-width: 2.0;
-  animation: rotate 1s ease-in-out infinite alternate
+  animation: rotate 1s ease-in-out 6 alternate
 }
 
 .NE-edge.NE-HighLight {
@@ -36,6 +36,25 @@
   z-index: 1000;
 }
 
+.helpContainer {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+
+}
+
+.helpTooltip {
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  border-radius: 4px;
+  background-color: rgba(246, 240, 186, 0.9);
+  border: 1px solid #c7b51a;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 1000;
+}
 
 @keyframes rotate {
   0% {

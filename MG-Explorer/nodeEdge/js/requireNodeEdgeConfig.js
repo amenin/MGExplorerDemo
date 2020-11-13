@@ -1,6 +1,6 @@
 require.config({
 
-// A referência é o local do require.js 
+// A referï¿½ncia ï¿½ o local do require.js 
 
   paths: {
     model: '../../lib/model-min',
@@ -18,6 +18,7 @@ require.config({
 	
     nodeEdgeChart: 'nodeEdgeChart',
     nodeEdgePanel: 'nodeEdgePanel',
+    nodeEdgeLegend: 'nodeEdgeLegend',
     algCluster: 'algCluster'	
   }
 });

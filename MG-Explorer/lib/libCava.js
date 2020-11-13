@@ -388,7 +388,6 @@ define(["d3"], function (d3) {
                     _stAdjacent = stAdjacent,  		// String representing the meaning of adjacent nodes
                     _divTooltip = null,
                     _svgTooltip = null;
-
                 let objNormal = {};
 
                 objNormal.create = function (divTooltip, node) {
@@ -1165,6 +1164,7 @@ define(["d3"], function (d3) {
                                         link: doc.link,
                                         date: doc.date,
                                         authors: doc.authors,
+                                        authorList: doc.authorList
                                     })
                                 }
                             });
@@ -1187,6 +1187,8 @@ define(["d3"], function (d3) {
                                                     link: doc.link,
                                                     date: doc.date,
                                                     authors: doc.authors,
+                                                    authorList: doc.authorList
+
                                                 })
                                             }
                                         }
@@ -1268,6 +1270,8 @@ define(["d3"], function (d3) {
                                                     link: doc.link,
                                                     date: doc.date,
                                                     authors: doc.authors,
+                                                    authorList: doc.authorList
+
                                                 });
                                             }
                                         }
@@ -1390,6 +1394,7 @@ define(["d3"], function (d3) {
                                                         link: doc.link,
                                                         date: doc.date,
                                                         authors: doc.authors,
+                                                        authorList: doc.authorList,
                                                     });
                                                 }
                                             }

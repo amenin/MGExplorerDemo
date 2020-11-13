@@ -41,6 +41,10 @@ define(["view"], function (View) {
                 vItens: [null, null, null, null]
             },
 
+            _subContextMenu = {
+                showing: false
+            },
+
             _dashboardArea = {
                 div: null,
                 svg: null,
@@ -53,6 +57,7 @@ define(["view"], function (View) {
 
         _dashboardArea.div = d3.select("#" + idDiv);
         _dashboardArea.div.classed("DS-viewArea", true)
+            .on("click", _onClickAction)
             .on("contextmenu", _onContextMenu)
             .on("dblclick", _dblClickAction);
 
@@ -104,17 +109,31 @@ define(["view"], function (View) {
             dt[0].y = d.y;
         }
 
+        function _onClickAction() {
+
+            if (_contextMenu.showing && _contextMenu.showing !== "keep") {
+                _contextMenu.showing = false;
+                d3.select(".DS-popup").remove();
+                d3.select("#subContextMenuDiv").remove();
+            }
+        }
+
         function _onContextMenu() {
             let clickedElem, viewDiv, popupDiv, mousePos;
 
             _selectedQuery = 8;
             //parseInt($("#selectQuery")[0].selectedIndex);
+            d3.event.preventDefault();
+
 
             if (_contextMenu.showing) {
                 d3.event.preventDefault();
                 _contextMenu.showing = false;
                 d3.select(".DS-popup").remove();
-            } else {
+            }
+            if (d3.event.target.nodeName !== "svg") {
+                _contextMenu.showing = true;
+
                 clickedElem = d3.select(d3.event.target);
 
                 if (clickedElem.classed("IC-node") || clickedElem.classed("GM-node")) {
@@ -230,27 +249,96 @@ define(["view"], function (View) {
 
         //------------
         function _execCtxMenuNodeEdgeHAL(popupDiv, clickedElem, parentId) {
+            console.log("enter here 1");
 
-            if (clickedElem.classed("NE-node")) {        // Display the context menu only if a node is clicked
+            if (clickedElem.classed("NE-node")) {
+                // Display the main context menu only if a node is clicked
                 popupDiv.selectAll("div")
                     .data(_contextMenu.vItens[DS_NodeEdge_HAL])
                     .enter()
                     .append("div")
                     .on("click", function (d) {
-                        _contextMenu.showing = false;
-                        d3.select(".DS-popup").remove();
-                        if (clickedElem.classed("NE-node"))
-                            d.fActionNode(clickedElem.datum(), parentId);
-                        else
-                            d.fActionEdge(clickedElem.datum(), parentId);
+                        let mousePos,
+                            viewDiv,
+                            contextMenuDivRight,
+                            subContextMenuDiv;
+                        if (typeof(d.submenu) === "undefined") {
+                            if (clickedElem.classed("NE-node"))
+                                d.fActionNode(clickedElem.datum(), parentId);
+                            else
+                                d.fActionEdge(clickedElem.datum(), parentId);
+                            _contextMenu.showing = false;
+                            d3.select(".DS-popup").remove();
+
+                        } else if (d.submenu) { //if you clicked on New Query
+                            var chart = this.parentNode.parentNode;
+                            mousePos = d3.mouse(chart);
+                            contextMenuDivRight = this.parentNode.getBoundingClientRect().width
+                                + this.parentNode.getBoundingClientRect().left
+                                - chart.getBoundingClientRect().left;
+
+                            if (d3.select("#subContextMenuDiv")[0][0] === null) {
+                                viewDiv = d3.select(d3.event.target.parentNode.parentNode.parentNode);
+                                viewDiv.append("div")
+                                    .attr("id", "subContextMenuDiv")
+                                    .attr("class", "DS-popup medium-size")
+                                    .style("left", contextMenuDivRight + "px")
+                                    .style("top", mousePos[1] + "px");
+                                subContextMenuDiv = d3.select("#subContextMenuDiv")
+
+                                /*  the following will load the submenu of "New Query" containing
+                                    query 1, ..., query7
+                                 */
+                                d.styleSheet.predefined_request_list.forEach(elt => {
+                                    subContextMenuDiv
+                                        .append("div")
+                                        .on("click", function() {
+                                            var form = undefined,
+                                                dataToSend = {
+                                                "query": elt.query,
+                                                "uri": elt.uri,
+                                                "title": elt.title
+                                            };
+                                            _contextMenu.showing = true;
+                                            dashboard.parentId = chart.id;
+                                            dashboard.title = elt.title;
+                                            if ([4, 5, 6, 7].includes(parseInt(elt.title.split("query")[1]))) {
+                                                form = document.querySelectorAll("textarea[id=" + elt.title + "]")[0]
+                                                    .parentNode;
+                                            }
+                                            if ([6, 7].includes(parseInt(elt.title.split("query")[1]))) {
+                                                processVisualizationQueryType(dataToSend, 2, form);
+                                            } else {
+                                                processVisualizationQuery(dataToSend, form);
+                                            }
+
+                                        })
+                                        .append("label")
+                                        .text(elt.title);
+                                });
+                                _contextMenu.showing = "keep";
+                            }
+                        }
                     })
                     .append("label")
                     .text(function (d) { return d.label; });
+
+                // var numQuery = parseInt(document.querySelectorAll("h3.active")[0]
+                //     .outerText.trim().split(" ")[1]),
+                //     button = document.querySelectorAll("button.collapsible#query" + numQuery)[0];
+                // console.log("coucou");
+                // if you didn't activate stylesheet then we remove the entry New Query from main context menu
+                // if (!button.previousElementSibling.previousElementSibling.checked)
+                //     Array.from(popupDiv.selectAll("div")[0]).forEach((elt, index) => {
+                //         if (elt.outerText === "New Query")
+                //             elt.remove();
+                //     });
             }
         }
 
         //------------	
         function _execCtxMenuClusterVis(popupDiv, clickedElem, parentId) {
+
             popupDiv.selectAll("div")
                 .data(_contextMenu.vItens[DS_ClusterVis])
                 .enter()
@@ -259,6 +347,7 @@ define(["view"], function (View) {
                     _contextMenu.showing = false;
                     d3.select(".DS-popup").remove();
                     d.fActionNode(clickedElem.datum(), parentId);
+                    console.log("here 1");
                 })
                 .append("label")
                 .text(function (d) { return d.label; });
@@ -266,6 +355,7 @@ define(["view"], function (View) {
 
         //------------
         function _execCtxMenuClusterVisHAL(popupDiv, clickedElem, parentId) {
+
             popupDiv.selectAll("div")
                 .data(_contextMenu.vItens[DS_ClusterVis_HAL])
                 .enter()
@@ -274,6 +364,7 @@ define(["view"], function (View) {
                     _contextMenu.showing = false;
                     d3.select(".DS-popup").remove();
                     d.fActionNode(clickedElem.datum(), parentId);
+                    console.log("here 2");
                 })
                 .append("label")
                 .text(function (d) { return d.label; });
@@ -343,6 +434,7 @@ define(["view"], function (View) {
             _lastIndex++;
             let idView = "view-" + _lastIndex;
             let objView = View(idView, this);
+            console.log(objView)
 
             _vIdViews.push(idView);
             _vObjViews.push(objView);
@@ -377,6 +469,9 @@ define(["view"], function (View) {
 
             if (configView.visible !== undefined)
                 _configView.visible = configView.visible;
+            
+            if (configView.btLegend != undefined)
+                _configView.btLegend = configView.btLegend;
 
             return dashboard;
         };
@@ -553,7 +648,7 @@ define(["view"], function (View) {
             /*
                     nodeTree.hidden = true;
                     view.show(false);
-
+        
                     node = nodeTree;
                     while (node.hidden) {
                         if (node.isLeaf) {

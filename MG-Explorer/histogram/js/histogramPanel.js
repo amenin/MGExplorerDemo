@@ -38,6 +38,16 @@ define([], function () {
         }
 
         function _addSelectOrder(idDivPanel) {
+
+            $(idDivPanel).append($("<br>")).append($("<button>").append("X").addClass("exitButton").on("click", (d) => {
+				const parent = $(d.target.offsetParent);
+
+				if (parent.css("display") === "none")
+					parent.css({ "display": "block" });
+				else
+					parent.css({ "display": "none" });
+            }));
+            
             _selectOrder = $("<select>", { class: "IC-selOrderBy" });
             $(idDivPanel).append($("<br/>")).append($("<label>").append("&nbsp;Order by:")).append(_selectOrder);
             _addItemsSelectOrder();

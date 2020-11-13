@@ -1,0 +1,34 @@
+.HT-grpNodos {
+	cursor: pointer;	
+}
+.HT-grpRoot rect {
+	cursor: default;
+}
+
+.HT-grpNodos rect {
+    fill: #c8daea;
+    stroke: steelblue;
+    stroke-width: 1.5px;	
+}
+
+.HT-grpNodos text {
+    font-size:10px; 
+    font-family:sans-serif;
+	font-weight: bold;
+	cursor: move;
+}
+
+.HistoryTreeChart {
+	cursor: move;	
+}
+
+.HT-NodeHidden text{
+    fill: gray;
+    font-size:10px; 
+    font-family:sans-serif;
+}
+
+.HT-NodeHidden rect{
+    fill: #f0f0f0;
+    stroke: gray;
+}

@@ -286,19 +286,7 @@ function showTransResults() {
     window2.focus();
 };
 
-// ------------------------------------------------------------
-// manage local datasets
 
-function loadData() {
-
-    const index = document.getElementById('selectQuery').value;
-    const data = index == 1 ? i3s_2007_2020 : (index == 2 ? i3s_inria_2007_2020: i3s_france_2007_2020);
-
-    document.getElementById("viewArea").innerHTML = null;
-    document.getElementById('lblMensagem').innerHTML = "Co-authorship Network of I3S Laboratory from 2007 to 2020 containing " + data.info.qtNodos + ' nodes and ' + data.info.qtArestas + ' edges';
-   
-    launch(JSON.stringify(data), 1, "i3s Laboratory")
-}
 
 
 

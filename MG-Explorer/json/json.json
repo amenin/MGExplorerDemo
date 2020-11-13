@@ -1,0 +1,6041 @@
+{
+    "info": {
+        "qtNodos": 52,
+        "qtArestas": 69
+    },
+    "nodes": {
+        "labelTitle": [
+            "Short Name",
+            "Author Name",
+            "Category",
+            "Research",
+            "Area"
+        ],
+        "valueTitle": [
+            "Year Last Pub",
+            "Qt Research",
+            "Qt Area",
+            "Qt Publications",
+            "Qt Journals",
+            "Qt Books",
+            "Qt Proceedings",
+            "Connected Comp.",
+            "Edge BetWeenness",
+            "Closeness Centrality",
+            "Betweenness Centrality",
+            "Degree"
+        ],
+        "imageTitle": null,
+        "dataNodes": [
+            {
+                "id": 0,
+                "idBD": 0,
+                "labels": [
+                    "h. carcinoma",
+                    "hepatocellular carcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    4,
+                    4,
+                    0.1,
+                    0.1,
+                    3,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 1,
+                "idBD": 1,
+                "labels": [
+                    "H. 229E",
+                    "Human coronavirus 229E",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 2,
+                "idBD": 2,
+                "labels": [
+                    "s. coronavirus",
+                    "severe acute respiratory syndrome-related coronavirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    6,
+                    0,
+                    0,
+                    0,
+                    7,
+                    7,
+                    0.1,
+                    0.1,
+                    4.5,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 3,
+                "idBD": 3,
+                "labels": [
+                    "C. Coronavirus",
+                    "Coronavirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    61,
+                    0,
+                    0,
+                    0,
+                    34,
+                    34,
+                    0.1,
+                    0.1,
+                    18,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 4,
+                "idBD": 4,
+                "labels": [
+                    "M. virus",
+                    "Mouse hepatitis virus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    7,
+                    0,
+                    0,
+                    0,
+                    6,
+                    6,
+                    0.1,
+                    0.1,
+                    4,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 5,
+                "idBD": 5,
+                "labels": [
+                    "c. cancer",
+                    "cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    3,
+                    3,
+                    0.1,
+                    0.1,
+                    2.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 6,
+                "idBD": 6,
+                "labels": [
+                    "C. Coronaviridae",
+                    "Coronaviridae",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    3,
+                    0.1,
+                    0.1,
+                    2.5,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 7,
+                "idBD": 7,
+                "labels": [
+                    "F. coronavirus",
+                    "Feline coronavirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    4,
+                    4,
+                    0.1,
+                    0.1,
+                    3,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 8,
+                "idBD": 8,
+                "labels": [
+                    "b. cancer",
+                    "breast cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 9,
+                "idBD": 9,
+                "labels": [
+                    "M. coronavirus",
+                    "Middle East respiratory syndrome coronavirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 10,
+                "idBD": 10,
+                "labels": [
+                    "f. fibrosarcoma",
+                    "fibrosarcoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 11,
+                "idBD": 11,
+                "labels": [
+                    "C. coronavirus",
+                    "Canine coronavirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 12,
+                "idBD": 12,
+                "labels": [
+                    "g. glioma",
+                    "glioma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    3,
+                    3,
+                    0.1,
+                    0.1,
+                    2.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 13,
+                "idBD": 13,
+                "labels": [
+                    "A. virus",
+                    "Avian infectious bronchitis virus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    9,
+                    0,
+                    0,
+                    0,
+                    3,
+                    3,
+                    0.1,
+                    0.1,
+                    2.5,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 14,
+                "idBD": 14,
+                "labels": [
+                    "c. cancer",
+                    "cervical cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 15,
+                "idBD": 15,
+                "labels": [
+                    "n. carcinoma",
+                    "nasopharynx carcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 16,
+                "idBD": 16,
+                "labels": [
+                    "o. cancer",
+                    "ovarian cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 17,
+                "idBD": 17,
+                "labels": [
+                    "a. astrocytoma",
+                    "astrocytoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 18,
+                "idBD": 18,
+                "labels": [
+                    "h. cancer",
+                    "head and neck cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 19,
+                "idBD": 19,
+                "labels": [
+                    "G. bone",
+                    "Giant-cell tumor of bone",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 20,
+                "idBD": 20,
+                "labels": [
+                    "m. melanoma",
+                    "melanoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    8,
+                    0,
+                    0,
+                    0,
+                    5,
+                    5,
+                    0.1,
+                    0.1,
+                    3.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 21,
+                "idBD": 21,
+                "labels": [
+                    "T. coronavirus",
+                    "Transmissible gastroenteritis coronavirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    4,
+                    4,
+                    0.1,
+                    0.1,
+                    3,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 22,
+                "idBD": 22,
+                "labels": [
+                    "a. leukemia",
+                    "acute lymphocytic leukemia",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 23,
+                "idBD": 23,
+                "labels": [
+                    "p. cancer",
+                    "prostate cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 24,
+                "idBD": 24,
+                "labels": [
+                    "c. cancer",
+                    "colorectal cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    7,
+                    0,
+                    0,
+                    0,
+                    3,
+                    3,
+                    0.1,
+                    0.1,
+                    2.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 25,
+                "idBD": 25,
+                "labels": [
+                    "s. cancer",
+                    "stomach cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 26,
+                "idBD": 26,
+                "labels": [
+                    "r. rhabdomyosarcoma",
+                    "rhabdomyosarcoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 27,
+                "idBD": 27,
+                "labels": [
+                    "l. lymphoma",
+                    "lymphoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    9,
+                    0,
+                    0,
+                    0,
+                    4,
+                    4,
+                    0.1,
+                    0.1,
+                    3,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 28,
+                "idBD": 28,
+                "labels": [
+                    "s. sarcoma",
+                    "sarcoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 29,
+                "idBD": 29,
+                "labels": [
+                    "b. cancer",
+                    "blood cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 30,
+                "idBD": 30,
+                "labels": [
+                    "a. leukemia",
+                    "acute myeloid leukemia",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 31,
+                "idBD": 31,
+                "labels": [
+                    "g. glioblastoma",
+                    "glioblastoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 32,
+                "idBD": 32,
+                "labels": [
+                    "H. OC43",
+                    "Human coronavirus OC43",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 33,
+                "idBD": 33,
+                "labels": [
+                    "l. leukemia",
+                    "leukemia",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    7,
+                    0,
+                    0,
+                    0,
+                    3,
+                    3,
+                    0.1,
+                    0.1,
+                    2.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 34,
+                "idBD": 34,
+                "labels": [
+                    "c. carcinoma",
+                    "carcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 35,
+                "idBD": 35,
+                "labels": [
+                    "a. adenocarcinoma",
+                    "adenocarcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    3,
+                    3,
+                    0.1,
+                    0.1,
+                    2.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 36,
+                "idBD": 36,
+                "labels": [
+                    "T. Torovirus",
+                    "Torovirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 37,
+                "idBD": 37,
+                "labels": [
+                    "B. coronavirus",
+                    "Bovine coronavirus",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    2
+                ],
+                "images": null
+            },
+            {
+                "id": 38,
+                "idBD": 38,
+                "labels": [
+                    "n. carcinoma",
+                    "non-small-cell lung carcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 39,
+                "idBD": 39,
+                "labels": [
+                    "f. fibroma",
+                    "fibroma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 40,
+                "idBD": 40,
+                "labels": [
+                    "m. myeloma",
+                    "multiple myeloma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 41,
+                "idBD": 41,
+                "labels": [
+                    "l. cancer",
+                    "lung cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 42,
+                "idBD": 42,
+                "labels": [
+                    "r. retinoblastoma",
+                    "retinoblastoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 43,
+                "idBD": 43,
+                "labels": [
+                    "c. cancer",
+                    "childhood cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 44,
+                "idBD": 44,
+                "labels": [
+                    "i. adenocarcinoma",
+                    "in situ pulmonary adenocarcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 45,
+                "idBD": 45,
+                "labels": [
+                    "a. leukemia",
+                    "acute promyelocytic leukemia",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 46,
+                "idBD": 46,
+                "labels": [
+                    "l. carcinoma",
+                    "large-cell lung carcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 47,
+                "idBD": 47,
+                "labels": [
+                    "P. ependymoma",
+                    "Pediatric ependymoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 48,
+                "idBD": 48,
+                "labels": [
+                    "K. sarcoma",
+                    "Kaposi's sarcoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 49,
+                "idBD": 49,
+                "labels": [
+                    "b. carcinoma",
+                    "basal-cell carcinoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 50,
+                "idBD": 50,
+                "labels": [
+                    "l. cancer",
+                    "laryngeal cancer",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0.1,
+                    0.1,
+                    1.5,
+                    1
+                ],
+                "images": null
+            },
+            {
+                "id": 51,
+                "idBD": 51,
+                "labels": [
+                    "n. neuroblastoma",
+                    "neuroblastoma",
+                    "Not Informed",
+                    "Not Informed",
+                    "Not Informed"
+                ],
+                "values": [
+                    2004,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    2,
+                    2,
+                    0.1,
+                    0.1,
+                    2,
+                    1
+                ],
+                "images": null
+            }
+        ]
+    },
+    "edges": {
+        "labelTitle": null,
+        "valueTitle": [
+            "Qt Publications",
+            "Qt Journals",
+            "Qt Books",
+            "Qt Proceedings",
+            "2004",
+            "English",
+            "Portuguese",
+            "Spanish",
+            "German",
+            "French",
+            "Research N.I.",
+            "Tolerancia a falhas",
+            "Inteligencia Artificial",
+            "Modelagem Conceitual e BD",
+            "Comp. Grafica e P.I.",
+            "Sistemas de Tempo Real",
+            "Arquiteture e Proj. Sist. Comp.",
+            "Microeletronica",
+            "Redes de Computadores",
+            "Proc.Paralelo e Distr.",
+            "Metodos formais",
+            "Fundamentos da Computacao",
+            "Engenharia de Software",
+            "Sistemas Embarcados",
+            "Teste e Confiabilidade",
+            "TV Digital",
+            "Projeto Isolado",
+            "Natureza N.I.",
+            "Trabalho Completo",
+            "Resumo",
+            "Capitulo",
+            "Texto Integral",
+            "Resumo Expandido",
+            "Outro",
+            "Area N.I.",
+            "Sistemas de Computacao",
+            "Sistemas de Informacao",
+            "Inteligencia Artificial",
+            "Eng. da Computacao",
+            "Informatica Teorica"
+        ],
+        "dataEdges": [
+            {
+                "src": 0,
+                "tgt": 1,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            1,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/3dd399d305426e614eae51dd03fb48fa86c4d324"
+                    }
+                ]
+            },
+            {
+                "src": 0,
+                "tgt": 2,
+                "labels": null,
+                "values": [
+                    9,
+                    0,
+                    0,
+                    0,
+                    9,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            2
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c6a72d0b6a1510ac7ecb3e16179d9784990f6314"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            2
+                        ],
+                        "link": "http://ns.inria.fr/covid19/7b620ef79c42118f157be2d9ab586fbd615b9fc6"
+                    }
+                ]
+            },
+            {
+                "src": 0,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    5,
+                    0,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            1,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/3dd399d305426e614eae51dd03fb48fa86c4d324"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c1e82ab3646382fd09d4e38c7041f89466f5028d"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            3,
+                            27
+                        ],
+                        "link": "http://ns.inria.fr/covid19/ddba9808c2e5a41e0a27996ff5b59e4c09ae159a"
+                    }
+                ]
+            },
+            {
+                "src": 0,
+                "tgt": 4,
+                "labels": null,
+                "values": [
+                    24,
+                    0,
+                    0,
+                    0,
+                    24,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c1e82ab3646382fd09d4e38c7041f89466f5028d"
+                    }
+                ]
+            },
+            {
+                "src": 5,
+                "tgt": 6,
+                "labels": null,
+                "values": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            6,
+                            3,
+                            7
+                        ],
+                        "link": "http://ns.inria.fr/covid19/bdcac9db79352158e6d350d9fe430e5be20c22d6"
+                    }
+                ]
+            },
+            {
+                "src": 5,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    6,
+                    0,
+                    0,
+                    0,
+                    6,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            6,
+                            3,
+                            7
+                        ],
+                        "link": "http://ns.inria.fr/covid19/bdcac9db79352158e6d350d9fe430e5be20c22d6"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/6b235789ef1785a5fbe39b0958ef4440eb482f54"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c7dc07727f9f0a09b060e1a3ca8acc3ee7d82bda"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            3,
+                            41
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d9dcb14ca476c86cc7c61f7650b76b47def235d4"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/44ba5bad2568d5aeec5cf8a23291ebc933bc2ba3"
+                    }
+                ]
+            },
+            {
+                "src": 5,
+                "tgt": 7,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            6,
+                            3,
+                            7
+                        ],
+                        "link": "http://ns.inria.fr/covid19/bdcac9db79352158e6d350d9fe430e5be20c22d6"
+                    }
+                ]
+            },
+            {
+                "src": 8,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    9,
+                    0,
+                    0,
+                    0,
+                    9,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            8,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/faec4bca24cb275ebc6c55e7cba3bd6a3b74df32"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            8,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/b5eea5100ecd167f491f314e660bd74423609194"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            8,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/6ba80f58d066d9fb759bac1191c72267d94afd39"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            8,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/e8d53e5527ae6c362e16b85de85a53cc3486f72f"
+                    }
+                ]
+            },
+            {
+                "src": 8,
+                "tgt": 9,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            8,
+                            9
+                        ],
+                        "link": "http://ns.inria.fr/covid19/092193fe026d59729062786d8f576b553e11a97d"
+                    }
+                ]
+            },
+            {
+                "src": 10,
+                "tgt": 11,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            10,
+                            11
+                        ],
+                        "link": "http://ns.inria.fr/covid19/e30f5f76a403e0a60d32f941c32fb5e0cd08c458"
+                    }
+                ]
+            },
+            {
+                "src": 12,
+                "tgt": 2,
+                "labels": null,
+                "values": [
+                    4,
+                    0,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            2,
+                            25,
+                            31
+                        ],
+                        "link": "http://ns.inria.fr/covid19/0dbe4d649872b1ecd33637cf4bcdeca805d2b714"
+                    }
+                ]
+            },
+            {
+                "src": 12,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    8,
+                    0,
+                    0,
+                    0,
+                    8,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            3,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/4f0ff8af7ea1d169470fd6a8baceba3749721764"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d3fbcedc8b7a8b3f10187502b64dd3abaeab56a4"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            3,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/e525b075d170cf15ddaf7f9b11f9de5f8ecaaf45"
+                    }
+                ]
+            },
+            {
+                "src": 12,
+                "tgt": 13,
+                "labels": null,
+                "values": [
+                    6,
+                    0,
+                    0,
+                    0,
+                    6,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            3,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/4f0ff8af7ea1d169470fd6a8baceba3749721764"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            3,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/e525b075d170cf15ddaf7f9b11f9de5f8ecaaf45"
+                    }
+                ]
+            },
+            {
+                "src": 14,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            14,
+                            3,
+                            11
+                        ],
+                        "link": "http://ns.inria.fr/covid19/39d6a8ab9a8d7bc5e0c1188cab0244b837742c61"
+                    }
+                ]
+            },
+            {
+                "src": 14,
+                "tgt": 11,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            14,
+                            3,
+                            11
+                        ],
+                        "link": "http://ns.inria.fr/covid19/39d6a8ab9a8d7bc5e0c1188cab0244b837742c61"
+                    }
+                ]
+            },
+            {
+                "src": 15,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            15,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/9ac8c3bdf598413af7ad755c3d08c5f05918d0d6"
+                    }
+                ]
+            },
+            {
+                "src": 16,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            16,
+                            3,
+                            38,
+                            41,
+                            46
+                        ],
+                        "link": "http://ns.inria.fr/covid19/18e0f53c82db254bfa884517bef263d9e8fecc53"
+                    }
+                ]
+            },
+            {
+                "src": 17,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    5,
+                    0,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            17,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/6fd4f961a0ff770ae9f9b853500ba8513327e831"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            17,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/a91e76329990d31ca420f0c82ceba12a79d0688c"
+                    }
+                ]
+            },
+            {
+                "src": 17,
+                "tgt": 4,
+                "labels": null,
+                "values": [
+                    27,
+                    0,
+                    0,
+                    0,
+                    27,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            17,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/a91e76329990d31ca420f0c82ceba12a79d0688c"
+                    }
+                ]
+            },
+            {
+                "src": 18,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            18,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d5e38fc7b155b08e5ff9d06ece3eb13a5388f646"
+                    }
+                ]
+            },
+            {
+                "src": 19,
+                "tgt": 2,
+                "labels": null,
+                "values": [
+                    15,
+                    0,
+                    0,
+                    0,
+                    15,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            19,
+                            2,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/b879b00ba0310b2582499d337ceeba46632a21ba"
+                    }
+                ]
+            },
+            {
+                "src": 19,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            19,
+                            2,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/b879b00ba0310b2582499d337ceeba46632a21ba"
+                    }
+                ]
+            },
+            {
+                "src": 20,
+                "tgt": 6,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            6,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/701cb250c84f7ab48e9d4b3bf2132dcdb9ee8291"
+                    }
+                ]
+            },
+            {
+                "src": 20,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            3,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c99640294d5862d4482de51f9a442deaf09b53be"
+                    }
+                ]
+            },
+            {
+                "src": 20,
+                "tgt": 13,
+                "labels": null,
+                "values": [
+                    24,
+                    0,
+                    0,
+                    0,
+                    24,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            6,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/701cb250c84f7ab48e9d4b3bf2132dcdb9ee8291"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/de34db0d2ca85142ffadf43e8a6abec285608f9e"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/1a07962f8472f03e5159e01b742cf39295db17f5"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d78cee411daf2fee4fa2dd9ca46b593910d40eba"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/PMC5683607"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/69b291cfc2734fb0ec65b49e7dba8ac35500cd85"
+                    }
+                ]
+            },
+            {
+                "src": 20,
+                "tgt": 4,
+                "labels": null,
+                "values": [
+                    20,
+                    0,
+                    0,
+                    0,
+                    20,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/06607df4c7c38c7a9b7d2a7326cce07475ee431f"
+                    }
+                ]
+            },
+            {
+                "src": 20,
+                "tgt": 21,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            20,
+                            3,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c99640294d5862d4482de51f9a442deaf09b53be"
+                    }
+                ]
+            },
+            {
+                "src": 22,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            22,
+                            3,
+                            43
+                        ],
+                        "link": "http://ns.inria.fr/covid19/472c1c000debe351dea71900e7b55c7c84ed9494"
+                    }
+                ]
+            },
+            {
+                "src": 23,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            23,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/dd9a2b263b1b66db904ed8a18dd6eba55e64bfff"
+                    }
+                ]
+            },
+            {
+                "src": 24,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    18,
+                    0,
+                    0,
+                    0,
+                    18,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            24,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/032105168779fce0b02645ab1423fc1789323d97"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            24,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/25e0a5092935b57609da913715f5e1e5e6ecb91f"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            24,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/73998a3f565b661816d48aa7c20fa5ae617864d5"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            24,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/22f3be8bbf6d792549b7a6088df7440e425cb34f"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            24,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/PMC2603006"
+                    }
+                ]
+            },
+            {
+                "src": 24,
+                "tgt": 7,
+                "labels": null,
+                "values": [
+                    4,
+                    0,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            24,
+                            7
+                        ],
+                        "link": "http://ns.inria.fr/covid19/85dbf4abb71bcfc7669604a80491e565e8181e29"
+                    }
+                ]
+            },
+            {
+                "src": 24,
+                "tgt": 4,
+                "labels": null,
+                "values": [
+                    5,
+                    0,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            24,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/28f87ecceb690e637ce9ac9135f11a6480f22f16"
+                    }
+                ]
+            },
+            {
+                "src": 25,
+                "tgt": 2,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            2,
+                            25,
+                            31
+                        ],
+                        "link": "http://ns.inria.fr/covid19/0dbe4d649872b1ecd33637cf4bcdeca805d2b714"
+                    }
+                ]
+            },
+            {
+                "src": 26,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            26,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/f927a30342bb541a01402fe10e981658c9c5d536"
+                    }
+                ]
+            },
+            {
+                "src": 27,
+                "tgt": 2,
+                "labels": null,
+                "values": [
+                    15,
+                    0,
+                    0,
+                    0,
+                    15,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            2,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/69a8322e73bf8be8b3cdda04dca292797fba7713"
+                    }
+                ]
+            },
+            {
+                "src": 27,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    9,
+                    0,
+                    0,
+                    0,
+                    9,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            0,
+                            3,
+                            27
+                        ],
+                        "link": "http://ns.inria.fr/covid19/ddba9808c2e5a41e0a27996ff5b59e4c09ae159a"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            2,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/69a8322e73bf8be8b3cdda04dca292797fba7713"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/1ee4cc235ce07b2d08d989e9001e2f4bd9af3138"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c4c795a6703372b7af4628fcb8eb39ff79361dc3"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/1e71c2bde51edec20ed10b612dd8d222d9dff056"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/fd28e6d03eef27b0454f13ca539dc1498242a4c2"
+                    }
+                ]
+            },
+            {
+                "src": 27,
+                "tgt": 7,
+                "labels": null,
+                "values": [
+                    6,
+                    0,
+                    0,
+                    0,
+                    6,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            7,
+                            29
+                        ],
+                        "link": "http://ns.inria.fr/covid19/357af8bb837fb3521423284fa624316d0965bfa3"
+                    }
+                ]
+            },
+            {
+                "src": 27,
+                "tgt": 9,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            9
+                        ],
+                        "link": "http://ns.inria.fr/covid19/579abc4fbba82c576047e3380164685a99c22673"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            9
+                        ],
+                        "link": "http://ns.inria.fr/covid19/PMC6369131"
+                    }
+                ]
+            },
+            {
+                "src": 28,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            28,
+                            3,
+                            48
+                        ],
+                        "link": "http://ns.inria.fr/covid19/82bc247394e2e55f46bdb295bd2a3f6d19f1365b"
+                    }
+                ]
+            },
+            {
+                "src": 29,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    24,
+                    0,
+                    0,
+                    0,
+                    24,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            29,
+                            3,
+                            33
+                        ],
+                        "link": "http://ns.inria.fr/covid19/432a9661e8c0a00f31e4e276a808a0a47860bbb5"
+                    }
+                ]
+            },
+            {
+                "src": 29,
+                "tgt": 7,
+                "labels": null,
+                "values": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            27,
+                            7,
+                            29
+                        ],
+                        "link": "http://ns.inria.fr/covid19/357af8bb837fb3521423284fa624316d0965bfa3"
+                    }
+                ]
+            },
+            {
+                "src": 30,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            30,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/da38234a5ddf7e9d8d468b64e942a50bf164e924"
+                    }
+                ]
+            },
+            {
+                "src": 31,
+                "tgt": 32,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            31,
+                            32
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d423380e92f356ef0e0692a8e6b8e619eaa5f203"
+                    }
+                ]
+            },
+            {
+                "src": 31,
+                "tgt": 2,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            12,
+                            2,
+                            25,
+                            31
+                        ],
+                        "link": "http://ns.inria.fr/covid19/0dbe4d649872b1ecd33637cf4bcdeca805d2b714"
+                    }
+                ]
+            },
+            {
+                "src": 33,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    20,
+                    0,
+                    0,
+                    0,
+                    20,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            29,
+                            3,
+                            33
+                        ],
+                        "link": "http://ns.inria.fr/covid19/432a9661e8c0a00f31e4e276a808a0a47860bbb5"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            33,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/084711cfbd65c911d55e32ac0bc8d748dac29f35"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            33,
+                            3,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/693d0f533004851d03a1f38a336f6aa943ea2733"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            33,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/3e71eb5bd4ccf675b2e597b29ce4c676e7fbd949"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            33,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d009fdd48b7a8539c810eee5b108ca0fc6c5e6a8"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            33,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/PMC3526251"
+                    }
+                ]
+            },
+            {
+                "src": 33,
+                "tgt": 13,
+                "labels": null,
+                "values": [
+                    7,
+                    0,
+                    0,
+                    0,
+                    7,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            33,
+                            3,
+                            13
+                        ],
+                        "link": "http://ns.inria.fr/covid19/693d0f533004851d03a1f38a336f6aa943ea2733"
+                    }
+                ]
+            },
+            {
+                "src": 33,
+                "tgt": 4,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            33,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/638ce87155f81ea03edcb4e2e16c447550aa8405"
+                    }
+                ]
+            },
+            {
+                "src": 34,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            34,
+                            3,
+                            39
+                        ],
+                        "link": "http://ns.inria.fr/covid19/73efc9aea409e5b761f806c5ab711069d3b47329"
+                    }
+                ]
+            },
+            {
+                "src": 35,
+                "tgt": 36,
+                "labels": null,
+                "values": [
+                    4,
+                    0,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            35,
+                            36,
+                            37
+                        ],
+                        "link": "http://ns.inria.fr/covid19/b47da8a2e5151e8abd91076c0f368e026732d009"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            35,
+                            36,
+                            37
+                        ],
+                        "link": "http://ns.inria.fr/covid19/2f3a3014cae837b0135bf1d5356c1d583423bdd0"
+                    }
+                ]
+            },
+            {
+                "src": 35,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    7,
+                    0,
+                    0,
+                    0,
+                    7,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            35,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/8b0dc9983d3905e515b2feb7ded520dcc7a4057d"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            35,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/02049ffbdb20997055c4def3516af0e6e40dd427"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            35,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/972cf3908b3438a738b8ae52d96468544d1f39f1"
+                    }
+                ]
+            },
+            {
+                "src": 35,
+                "tgt": 37,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            35,
+                            36,
+                            37
+                        ],
+                        "link": "http://ns.inria.fr/covid19/b47da8a2e5151e8abd91076c0f368e026732d009"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            35,
+                            36,
+                            37
+                        ],
+                        "link": "http://ns.inria.fr/covid19/2f3a3014cae837b0135bf1d5356c1d583423bdd0"
+                    }
+                ]
+            },
+            {
+                "src": 38,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    8,
+                    0,
+                    0,
+                    0,
+                    8,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            16,
+                            3,
+                            38,
+                            41,
+                            46
+                        ],
+                        "link": "http://ns.inria.fr/covid19/18e0f53c82db254bfa884517bef263d9e8fecc53"
+                    }
+                ]
+            },
+            {
+                "src": 39,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    6,
+                    0,
+                    0,
+                    0,
+                    6,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            34,
+                            3,
+                            39
+                        ],
+                        "link": "http://ns.inria.fr/covid19/73efc9aea409e5b761f806c5ab711069d3b47329"
+                    }
+                ]
+            },
+            {
+                "src": 40,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            40,
+                            3,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/0d00cee8318776d4248889d670c9969eaa3993ad"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            40,
+                            3,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c93a0161a57b9a8ebcc1c6395d81ad237b38e66a"
+                    }
+                ]
+            },
+            {
+                "src": 40,
+                "tgt": 21,
+                "labels": null,
+                "values": [
+                    9,
+                    0,
+                    0,
+                    0,
+                    9,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            40,
+                            3,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/0d00cee8318776d4248889d670c9969eaa3993ad"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            40,
+                            3,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c93a0161a57b9a8ebcc1c6395d81ad237b38e66a"
+                    }
+                ]
+            },
+            {
+                "src": 41,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    4,
+                    0,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            5,
+                            3,
+                            41
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d9dcb14ca476c86cc7c61f7650b76b47def235d4"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            16,
+                            3,
+                            38,
+                            41,
+                            46
+                        ],
+                        "link": "http://ns.inria.fr/covid19/18e0f53c82db254bfa884517bef263d9e8fecc53"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            41,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/1af002f1e5af495a19c451ce3707c3ccc9e9bb10"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            41,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/c84b7f713cf6774d4958a1400ae46d198eb39c85"
+                    }
+                ]
+            },
+            {
+                "src": 42,
+                "tgt": 6,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            42,
+                            6,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/bc91f45d3fb7fbedebffb850dbf2dc3d3c7c2142"
+                    }
+                ]
+            },
+            {
+                "src": 42,
+                "tgt": 21,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            42,
+                            6,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/bc91f45d3fb7fbedebffb850dbf2dc3d3c7c2142"
+                    }
+                ]
+            },
+            {
+                "src": 43,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    5,
+                    0,
+                    0,
+                    0,
+                    5,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            22,
+                            3,
+                            43
+                        ],
+                        "link": "http://ns.inria.fr/covid19/472c1c000debe351dea71900e7b55c7c84ed9494"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            43,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/da3c13d431db06ed31f0a34985d0f1a24f189406"
+                    }
+                ]
+            },
+            {
+                "src": 44,
+                "tgt": 2,
+                "labels": null,
+                "values": [
+                    4,
+                    0,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            44,
+                            2,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/4d0d82be6ba94422e252ff243a2cd89d13ea736a"
+                    }
+                ]
+            },
+            {
+                "src": 44,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            44,
+                            2,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/4d0d82be6ba94422e252ff243a2cd89d13ea736a"
+                    }
+                ]
+            },
+            {
+                "src": 45,
+                "tgt": 21,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            45,
+                            21
+                        ],
+                        "link": "http://ns.inria.fr/covid19/ad58a9c8fca5baf158c0c25aa68a08dc7265d3c8"
+                    }
+                ]
+            },
+            {
+                "src": 46,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            16,
+                            3,
+                            38,
+                            41,
+                            46
+                        ],
+                        "link": "http://ns.inria.fr/covid19/18e0f53c82db254bfa884517bef263d9e8fecc53"
+                    }
+                ]
+            },
+            {
+                "src": 47,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            47,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/8ed2df683ca3cde36ebee8185754abf4c44b717b"
+                    }
+                ]
+            },
+            {
+                "src": 48,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            28,
+                            3,
+                            48
+                        ],
+                        "link": "http://ns.inria.fr/covid19/82bc247394e2e55f46bdb295bd2a3f6d19f1365b"
+                    }
+                ]
+            },
+            {
+                "src": 49,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            49,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d0ae3d2b524952d6a21bc4ef1b0bb793e8b811f7"
+                    }
+                ]
+            },
+            {
+                "src": 50,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            50,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/88534ac83f589e5b7cfcb52ac0062db7b6b101ac"
+                    }
+                ]
+            },
+            {
+                "src": 51,
+                "tgt": 3,
+                "labels": null,
+                "values": [
+                    8,
+                    0,
+                    0,
+                    0,
+                    8,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            51,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/e05116fa2231f642ca495fbe5ed0660a434d9a00"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            51,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/d1ab379487b829f2a3d3f78f27a427f2dd87deda"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            51,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/f21c95ba9743114144b44a49985e05a405920b29"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            51,
+                            3
+                        ],
+                        "link": "http://ns.inria.fr/covid19/4bb7608746b8149c02513261f17f69ff92966378"
+                    }
+                ]
+            },
+            {
+                "src": 51,
+                "tgt": 4,
+                "labels": null,
+                "values": [
+                    4,
+                    0,
+                    0,
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "documents": [
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            51,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/e05116fa2231f642ca495fbe5ed0660a434d9a00"
+                    },
+                    {
+                        "type": "conference paper",
+                        "date": "2020",
+                        "title": "Undefined",
+                        "authors": [
+                            51,
+                            3,
+                            4
+                        ],
+                        "link": "http://ns.inria.fr/covid19/f21c95ba9743114144b44a49985e05a405920b29"
+                    }
+                ]
+            }
+        ]
+    }
+}
