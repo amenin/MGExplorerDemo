@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>MGExplorer</title>
+        <link rel="stylesheet" type="text/css"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all" />
+        
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/lib/jquery-ui-1.10.3.custom.min.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/dashboard/css/view.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/dashboard/css/dashboard.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/nodeEdge/css/nodeEdgeChart.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/nodeEdge/css/nodeEdgePanel.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/papersList/css/papersListChart.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/papersList/css/papersListPanel.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/clusterVis/css/clusterVisChart.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/clusterVis/css/clusterVisPanel.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/iris/css/irisChart.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/iris/css/irisPanel.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/matrixGlyph/css/matrixGlyphChart.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/matrixGlyph/css/matrixGlyphPanel.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/historyTree/css/historyTreeChart.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="MG-Explorer/MGExplorer/css/MGExplorer.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="query.css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <script type="text/javascript" src="MG-Explorer/lib/jLouvain.js"></script>
+        <script data-main="MG-Explorer/MGExplorer/js/MGExplorer.js" src="MG-Explorer/lib/require.js"></script>
+        <script src="MG-Explorer/MGExplorer/js/require-MGExplorer-Config.js"></script>
+
+        <script src="MG-Explorer/MGExplorer/js/MGExplorer.js"></script>
+        <script src="json/i3s_2007_2020.js"></script>
+        <script src="json/i3s_france_2007_2020.js"></script>
+        <script src="json/i3s_inria_2007_2020.js"></script>
+
+        <script src="index.js"></script>
+    </head>
+
+    <body>
+        <div id="toolBar" style="z-index:1000">
+            <form id="query">
+                <label id="titulo">MGExplorer</label>
+                <label>Choose the dataset:</label>
+                <select id="selectQuery">
+                    <option selected value="1">i3s (2007-2020)</option>
+                    <option value="2">i3s Inria Sophia Antipolis (2007-2020)</option>
+                    <option value="3">i3s France (2007-2020)</option>
+                </select>
+                <i class="fas fa-arrow-circle-right" onclick="loadData()"></i>
+                <label id="lblMensagem"></label>
+            </form>
+        </div>
+
+        <div id="viewArea" style="top:10%" class="viewing"></div>
+</html>

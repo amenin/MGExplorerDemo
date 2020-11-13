@@ -1,0 +1,43 @@
+        #tab {
+            border: 2px solid;
+            width: 1300px;
+            margin: 0 auto;
+        }
+
+        #tab h3 {
+            border: 1px solid #cccccc;
+            margin: 2px 1px 0px 1px;
+            padding: 0px;
+            font-size: 20px;
+            float: left;
+            right: 5px;
+            width: 100px;
+            height: 30px;
+            line-height: 24px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #tab h3.active {
+            background: #cccc00;
+        }
+
+        #tab div.hide {
+            clear: both;
+            padding: 20px 0px 0px 20px;
+
+            border: 1px solid #cccccc;
+        }
+
+        #tab div.content {
+            clear: both;
+            padding: 20px 0px 0px 20px;
+
+            border: 1px solid #cccccc;
+            display: block;
+            background: #cccc00;
+        }
+
+        select#selectQuery {
+            color: black;
+        }

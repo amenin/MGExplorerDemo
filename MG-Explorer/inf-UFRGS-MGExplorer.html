@@ -1,0 +1,69 @@
+<!--
+inf-UFRGS-MGExplorer.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.10.3.custom.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="dashboard/css/view.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="dashboard/css/dashboard.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="nodeEdge/css/nodeEdgeChart.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="nodeEdge/css/nodeEdgePanel.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="clusterVis/css/clusterVisChart.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="clusterVis/css/clusterVisPanel.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="iris/css/irisChart.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="iris/css/irisPanel.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="matrixGlyph/css/matrixGlyphChart.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="matrixGlyph/css/matrixGlyphPanel.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="papersList/css/papersListChart.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="papersList/css/papersListPanel.css" media="all"/>
+
+    <link rel="stylesheet" type="text/css" href="historyTree/css/historyTreeChart.css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="MGExplorer/css/MGExplorer.css" media="all" />
+    <!-- script -->
+    <script type="text/javascript" src="lib/jLouvain.js"></script>
+
+    <script data-main="MGExplorer/js/MGExplorer.js" src="lib/require.js"></script>
+    <script src="MGExplorer/js/require-MGExplorer-Config.js"></script>
+</head>
+<body>
+
+<div id="toolBar" style="z-index:1000">
+    <form id="query">
+        <label id="titulo">MGExplorer</label>
+        <label>Select to load:</label>
+        <select id="selectQuery">
+            <option selected value="0" >2004-All</option>
+            <option value="1" >2010-All</option>
+            <option value="2">2011-All</option>
+            <option value="3">2004-Fault Tolerance</option>
+            <option value="4">2010-Computer Graphics</option>
+            <option value="5">2011-Computer Graphics</option>
+            <option value="6">2010-2011-All</option>
+            <option value="7">2004-2011-CG</option>
+            <option value="8">HAL OpenData</option>
+        </select>
+        <label>&nbsp;&nbsp;Cluster by:</label>
+        <select id="selectCluster">
+            <option selected value="0" >None</option>
+            <option value="1">Algorithm Louvain</option>
+            <option value="2">Research</option>
+            <option value="3" >Area</option>
+            <option value="4" >Conected Comp.</option>
+        </select>
+        <label id="lblMensagem">Clicking on the node/edge with the right button allows to derive a new view</label>
+    </form>
+</div>
+
+<div id="viewArea">
+</div>
+</body>
+</html>
