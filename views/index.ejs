@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../head") %>
+    <title>MGExplorer</title>
+</head>
+
+<body>
+    <div id="toolBar" style="z-index:1000">
+        <form id="query">
+            <label id="titulo">MGExplorer</label>
+            <label>Choose a dataset:</label>
+            <select id="selectQuery"></select>
+            <i class="fas fa-arrow-circle-right" onclick="loadData()"></i>
+        </form>
+        or load your own 
+        <span onclick="handleLoadFileDialog()"><i class="fas fa-upload"></i></span>
+        <div class='loadFile' id='fileDialog'>
+            <label for="myfile">Select a file:</label>
+            <input type="file" name="dataFile" id="dataFile"/>
+            <br>
+            <label>Data type:</label>
+            <div><input type="radio" name="1" id="type1" checked='checked'></input> 1 (Co-authorship within a single institution)</div>
+            <div><input type="radio" name="2" id="type2"></input> 2 (Co-authorship between two institutions)</div>
+            <div><input type="radio" name="3" id="type3"></input> 3 (Co-authorship between an institution and a particular country/state/province/city)</div>
+            <br>
+            <label>Name of 1th institution: <i style='color:red;'>*</i></label>
+            <input type='text' id='institution1' placeholder="Institution1" required></input>
+            <label>Name of 2nd institution:</label>
+            <input type='text' id='institution2' placeholder="Institution2" ></input>
+            <label>Name of country/state/province/city:</label>
+            <input type='text' id='country' placeholder="Country A" ></input>
+            <br>
+            <br>
+            <div><input type="checkbox" name="save" id="saveFile"></input> Save File</div>
+            <button onclick="handleFileUpload()">Upload!</button>
+        </div>
+        <label id="lblMensagem"></label>
+    </div>
+
+    <div id="viewArea" style="top:10%" class="viewing"></div>
+</body>
+
+<script>
+
+    const data = <%- JSON.stringify(data) %>;
+
+
+    d3.select('#selectQuery').selectAll('option')
+        .data(data)
+        .enter()
+            .append('option')
+            .attr('value', d => d.label)
+            .text(d => d.label)
+
+    d3.selectAll("input[id*='type']")
+        .on('change', function() {
+            const _this = this;
+            d3.selectAll("input[id*='type']")
+                .property('checked', function() { return this == _this ? true : false; })
+        })
+
+    function loadData() {
+
+        const value = document.getElementById('selectQuery').value;
+        const selectedData = data.filter(d => d.label == value)[0].data;
+
+        document.getElementById("viewArea").innerHTML = null;
+        document.getElementById('lblMensagem').innerHTML = "Co-authorship Network of I3S Laboratory from 2007 to 2020 containing " + 
+            selectedData.info.qtNodos + ' nodes and ' + selectedData.info.qtArestas + ' edges';
+
+        launch(JSON.stringify(selectedData), 1, "i3s Laboratory")
+    }
+
+    function handleLoadFileDialog(){
+        const dialog = document.getElementById('fileDialog');
+        if (dialog.style.display == 'block') dialog.style.display = 'none';
+        else dialog.style.display = 'block';
+    }
+
+    function hideFileDialog(){
+        d3.select('.loadFile').style('display', 'none')
+    }
+
+    function handleFileUpload() {
+        let filename = document.getElementById('dataFile').value;
+
+        if (!filename) {
+            alert('You must select a file!')
+            return;
+        } 
+        
+        filename = filename.split('\\')[2];
+       
+        const parts = filename.split('.')
+        if (parts[parts.length - 1] == 'json') {
+            const formData = new FormData();
+            const fileField = document.getElementById('dataFile')
+
+            formData.append('dataFile', fileField.files[0]);
+            formData.append('fileProps', JSON.stringify({'saveFile': document.getElementById('saveFile').checked}))
+
+            let type;
+            d3.selectAll("input[id*='type']").each(function() {
+                if (this.checked) type = this.name; 
+            })
+
+            const values = {
+                'formData': formData,
+                'saveFile': document.getElementById('saveFile').checked,
+                'titles': [document.getElementById('institution1').value, document.getElementById('institution2').value, document.getElementById('country').value],
+                'type': type
+            }
+
+            let url = window.location.href + "upload";
+    
+            fetch(url, {
+                method: 'POST', 
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => { 
+                hideFileDialog()
+                document.getElementById("viewArea").innerHTML = null;
+                document.getElementById('lblMensagem').innerHTML = "Co-authorship Network of I3S Laboratory from 2007 to 2020 containing " + 
+                    data.info.qtNodos + ' nodes and ' + data.info.qtArestas + ' edges';
+
+                try {
+                    launch(JSON.stringify(data), 1, "i3s Laboratory")
+                } catch (e) {
+                    alert(e)
+                }
+            }).catch(error => {
+                hideFileDialog()
+                alert(error);
+            });
+        } else {
+            toast.fire({
+                icon: 'error',
+                title: 'The chosen file extension is not valid. You must upload a ".json" file.'
+            })
+        }
+    }
+    
+</script>
+    
+</html>

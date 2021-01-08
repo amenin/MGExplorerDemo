@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../head") %>
+    <title>ARViz</title>
+</head>
+
+<body>
+    <div class="header">
+        <%- include("../header") %>
+    </div>
+
+    <div class="about">
+
+        The goal of this visualization is to provide interactive browsing of association rules within named entities of a RDF graph. We use an approach that allows to extract non-evident rules that might be of interest to users.
+
+        <h3>About the Dataset</h3>
+
+        The input dataset correspond to the output data of a mining algorithm that discover association rules within a RDF graph. 
+        This algorithm is applied the <em>CovidOnTheWeb</em> which is derived from the <a href="https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge">CORD19</a> dataset, which, at the time of this study, contained around 50,000 scientific publications on the topic of coronaviruses-related diseases. 
+        The <em>CovidOnTheWeb</em> dataset comprises two graphs: the CORD-19 Named Entities Knowledge Graph, and the CORD-19 Argumentative Knowledge Graph.<br>
+
+        For extracting the association rules, we used the CORD-19 Named Entities Knowledge Graph, which describes the named entities embedded in the publications, which are linked to <a href="https://wiki.dbpedia.org/">DBPedia</a>, <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>, and <a href="https://bioportal.bioontology.org/">Bioportal</a> datasets. Particulary, at the moment, we use the named entities linked to the Wikidata dataset. Furthermore, we only treat publications between 1990 and 2020. <br><br>
+
+        <h3>About the Algorithm</h3>
+
+        <h4>Input data </h4> The dataset is pre-processed and transformed into a transaction matrix, which rows represent the publications and columns represent the named entities. The intersection cells are binary values indicating whether the named entity exist on the paper (1) or not (0). <br>
+
+        <h4>The algorithm</h4> The main goal of the algorithm is to derive association rules between named entities. As an illustrative example, let us take the named entity <em>coronavirus</em>, which in 70% of cases where the term was found in a publication, one would also find to the named entity <em>China</em>. <br>
+        We use the <a href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpgrowth/"><b>FP-Growth</b></a> algorithm from the Python library <em>mlxtend.frequent_pattern</em>, created by <a href="https://sebastianraschka.com/">Sebastian Raschka</a>.
+
+        <h4>Output data</h4> The output data (represented in the visualization) consists of a table which rows correspond to rules and the columns contain descriptive variables, defined as follows:
+        
+        <ul>
+            <li>Antecedents: either a named entity or a pair of named entities.</li>
+            <li>Consequents: either a named entity or a pair of named entities, which are consequence of the existence of antecendents in the publication.</li>
+            <li>Support: the probability of finding the named entities X and Y in a transaction. It is estimated by the number of times X and Y appear among all available transactions. The resulting value is between 0 and 1.</li>
+            <ul>
+                <li>Supp(X &#8594; Y) = P(X &#8745; Y)</li>
+            </ul>
+            <li>Confidence: the probability of finding the named entity Y in a transaction, knowing that the named entity X is in the same transaction. It is estimated by the corresponding frequency observed (number of times that X and Y appear among all transactions divided by the number of times where X is found). The resulting value is is between 0 and 1.</li>
+            <ul>
+                <li>Conf(X &#8594; Y) = P (Y / X) = P(X &#8745; Y) / P(X) = Sup(X &#8594; Y) / Sup(X)</li>
+            </ul>
+            <li>Interestingness: the serendipity of the rule, which serve to penalize the rules or named entities with high frequency of appearance within the database.</li>
+            <ul>
+                <li>Interestingness(X &#8594; Y) = (Supp(X &#8594; Y) / Supp(X)) &#215; (Supp(X &#8594; Y) / Supp(Y)) &#215; (1 - (Supp(X &#8594; Y) / Tot. No. of transactions))</li>
+            </ul>
+            <li>isSymmetric: whether the rule works inversely, i.e. whether there is another rule where the antecendent is the consequent and vice versa.</li>
+            <li>Cluster: the cluster which the rule belongs. These are automatically generated with no assigend semantic meaning.</li>
+        </ul>
+
+        In order to keep only non-evident rules, we applied filtering methods based on:
+        <ul>
+            <li>the <em>confidence</em>, which defines a threshold of confidence (&#8805; .7) that determine whether the rule is kept.</li>
+            <li>the <em>interestingness</em>, which defines a threshold of interestingness (&#8805; .3) that determine whether the rule is kept.</li>
+            <li>the <em>redundancy</em>, which remove every rule that comply with the following definition of redundancy: A,B,C &#8594; D is redundant if Conf(A,B &#8594; D) &#8805; Conf(A,B,C &#8594; D) </li>
+        </ul>
+
+        The resulting dataset contains 1609 rules.
+       
+        <h3>People involved in the project:</h3>
+        <ul class="people">
+            <li><a href="mailto:aline.menin@inria.fr">Aline Menin</a>, Research Engineer, Laboratory I3S, CNRS, INRIA</li>
+            <li><a href="mailto:lucie.cadorel@inria.fr">Lucie Cadorel</a>, PhD Student, Laboratory I3S, CNRS, INRIA</li>
+            <li><a href="mailto:andrea.tettamanzi@univ-cotedazur.fr">Andrea G. B. Tettamanzi</a>, Professor, Université Côté d'Azur, Laboratory I3S, CNRS, INRIA</li>
+            <li><a href="mailto:marco.winckler@unice.fr">Marco Winckler</a>, Professor, Université Côté d'Azur, Laboratory I3S, CNRS, INRIA</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p class="f3">
+            <a href="/">Home</a>
+        </p>
+    </footer>
+</body>
+
+</html>
